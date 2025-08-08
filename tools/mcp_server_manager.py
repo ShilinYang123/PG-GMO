@@ -221,8 +221,23 @@ class MCPServerManager:
         
 def main():
     """主函数"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='MCP服务器管理器')
+    parser.add_argument('command', nargs='?', default='init', 
+                       choices=['init', 'status'], 
+                       help='执行的命令: init(初始化) 或 status(状态检查)')
+    
+    args = parser.parse_args()
     manager = MCPServerManager()
-    manager.initialize_mcp_system()
+    
+    if args.command == 'status':
+        # 生成状态报告并输出
+        report = manager.generate_status_report()
+        print(report, flush=True)
+    else:
+        # 默认初始化
+        manager.initialize_mcp_system()
     
 if __name__ == "__main__":
     main()

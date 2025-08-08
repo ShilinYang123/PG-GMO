@@ -140,11 +140,14 @@ def check_mcp_servers():
                 cwd=str(PROJECT_ROOT),
                 capture_output=True,
                 text=True,
-                encoding='utf-8'
+                encoding='utf-8',
+                errors='ignore'
             )
             
             if result.returncode == 0:
                 logger.info("MCP服务器状态检查完成")
+                if result.stdout:
+                    logger.info(f"MCP状态报告:\n{result.stdout}")
                 return True
             else:
                 logger.warning(f"MCP服务器状态检查异常: {result.stderr}")
