@@ -32,24 +32,18 @@ class MCPServerManager:
         self.mcp_dir = self.project_root / "project" / "MCP"
         self.logs_dir = self.project_root / "logs"
         
-        # MCP服务器配置
+        # MCP服务器配置 - 使用实际文件路径
         self.mcp_servers = {
             "office": {
-                "excel": {
-                    "name": "Excel MCP Server",
-                    "path": self.mcp_dir / "office" / "excel_mcp_server.py",
-                    "port": 8001,
-                    "status": "stopped"
-                },
                 "word": {
                     "name": "Word MCP Server",
-                    "path": self.mcp_dir / "office" / "word_mcp_server.py",
+                    "path": self.mcp_dir / "office" / "word-mcp" / "word_mcp_server.py",
                     "port": 8002,
                     "status": "stopped"
                 },
                 "powerpoint": {
                     "name": "PowerPoint MCP Server",
-                    "path": self.mcp_dir / "office" / "powerpoint_mcp_server.py",
+                    "path": self.mcp_dir / "office" / "powerpoint-mcp" / "ppt_mcp_server.py",
                     "port": 8003,
                     "status": "stopped"
                 }
@@ -57,7 +51,7 @@ class MCPServerManager:
             "design": {
                 "photoshop": {
                     "name": "Photoshop MCP Server",
-                    "path": self.mcp_dir / "design" / "photoshop_mcp_server.py",
+                    "path": self.mcp_dir / "graphics" / "adobe-mcp-unified" / "adobe_mcp" / "photoshop" / "server.py",
                     "port": 8004,
                     "status": "stopped"
                 }
@@ -65,13 +59,13 @@ class MCPServerManager:
             "cad": {
                 "autocad": {
                     "name": "AutoCAD MCP Server",
-                    "path": self.mcp_dir / "cad" / "autocad_mcp_server.py",
+                    "path": self.mcp_dir / "cad" / "autocad-mcp" / "server_lisp.py",
                     "port": 8005,
                     "status": "stopped"
                 },
                 "general_cad": {
                     "name": "General CAD MCP Server",
-                    "path": self.mcp_dir / "cad" / "general_cad_mcp_server.py",
+                    "path": self.mcp_dir / "cad" / "cad-mcp" / "src" / "server.py",
                     "port": 8006,
                     "status": "stopped"
                 }
@@ -79,14 +73,8 @@ class MCPServerManager:
             "graphics": {
                 "illustrator": {
                     "name": "Illustrator MCP Server",
-                    "path": self.mcp_dir / "graphics" / "illustrator_mcp_server.py",
+                    "path": self.mcp_dir / "graphics" / "illustrator-mcp-windows" / "src" / "illustrator" / "illustrator" / "server.py",
                     "port": 8007,
-                    "status": "stopped"
-                },
-                "excalidraw": {
-                    "name": "Excalidraw MCP Server",
-                    "path": self.mcp_dir / "graphics" / "excalidraw_mcp_server.py",
-                    "port": 8008,
                     "status": "stopped"
                 }
             }

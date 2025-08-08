@@ -21,7 +21,7 @@ from typing import Dict, List, Optional
 class ComplianceEnabler:
     """合规性启用器"""
     
-    def __init__(self, project_root: str = "s:/PG-PMC"):
+    def __init__(self, project_root: str = "s:/PG-GMO"):
         self.project_root = Path(project_root)
         self.config_file = self.project_root / "docs" / "03-管理" / "project_config.yaml"
         self.tools_dir = self.project_root / "tools"
@@ -66,7 +66,7 @@ class ComplianceEnabler:
         # 检查核心文档
         core_docs = [
             "docs/01-设计/开发任务书.md",
-            "docs/01-设计/技术方案.md",
+            "docs/01-设计/技术路线.md",
             "docs/01-设计/项目架构设计.md",
             "docs/03-管理/规范与流程.md"
         ]
@@ -429,7 +429,7 @@ def main():
     parser.add_argument("--enable", action="store_true", help="启用合规性机制")
     parser.add_argument("--disable", action="store_true", help="禁用合规性机制")
     parser.add_argument("--status", action="store_true", help="显示启用状态")
-    parser.add_argument("--project-root", default="s:/PG-PMC", help="项目根目录")
+    parser.add_argument("--project-root", default="s:/PG-GMO", help="项目根目录")
     
     args = parser.parse_args()
     
