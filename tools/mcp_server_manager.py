@@ -149,7 +149,7 @@ class MCPServerManager:
         for category, servers in status.items():
             report.append(f"【{category.upper()}类MCP服务器】")
             for server_name, is_ok in servers.items():
-                status_icon = "✅" if is_ok else "❌"
+                status_icon = "[OK]" if is_ok else "[FAIL]"
                 server_info = self.mcp_servers[category][server_name]
                 report.append(f"  {status_icon} {server_info['name']} (端口: {server_info['port']})")
             report.append("")
