@@ -147,7 +147,9 @@ def check_mcp_servers():
             if result.returncode == 0:
                 logger.info("MCP服务器状态检查完成")
                 if result.stdout:
-                    logger.info(f"MCP状态报告:\n{result.stdout}")
+                    # 清理输出中的特殊字符，避免编码问题
+                    clean_output = result.stdout.encode('ascii', 'ignore').decode('ascii')
+                    logger.info(f"MCP状态报告:\n{clean_output}")
                 return True
             else:
                 logger.warning(f"MCP服务器状态检查异常: {result.stderr}")
