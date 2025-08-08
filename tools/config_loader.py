@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-统一配置加载模块
+高效办公助手系统统一配置加载模块
 支持多种配置文件格式和验证功能
+专门适配MCP服务器集群和AI Agent配置管理
 """
 import yaml
 import logging
@@ -18,6 +19,11 @@ def get_project_root():
     # 首先尝试从环境变量获取
     if 'PROJECT_ROOT' in os.environ:
         return Path(os.environ['PROJECT_ROOT'])
+    
+    # 高效办公助手系统默认路径
+    default_path = Path("s:/PG-GMO")
+    if default_path.exists():
+        return default_path
     
     # 备用方案：从当前文件位置推断
     return Path(__file__).parent.parent
@@ -123,15 +129,15 @@ def get_config():
 
 
 def get_mcp_config() -> Dict[str, Any]:
-    """获取MCP配置
+    """获取高效办公助手系统MCP配置
 
     Returns:
-        Dict: MCP配置字典，包含memory和task_manager配置
+        Dict: MCP配置字典，包含office、cad、graphics等服务器配置
     """
     config = get_config()
     mcp_config = config.get('mcp', {})
 
-    # 设置默认值
+    # 设置默认值 - 高效办公助手系统
     default_mcp_config = {
         'memory': {
             'storage_path': 'docs/02-开发/memory.json',
@@ -140,20 +146,120 @@ def get_mcp_config() -> Dict[str, Any]:
         'task_manager': {
             'storage_path': 'docs/02-开发/tasks.json',
             'isolation_mode': 'project'
+        },
+        'office_servers': {
+            'excel': {
+                'enabled': True,
+                'port': 8001,
+                'config_path': 'project/MCP/config/excel_config.yaml'
+            },
+            'word': {
+                'enabled': True,
+                'port': 8002,
+                'config_path': 'project/MCP/config/word_config.yaml'
+            },
+            'powerpoint': {
+                'enabled': True,
+                'port': 8003,
+                'config_path': 'project/MCP/config/powerpoint_config.yaml'
+            }
+        },
+        'cad_servers': {
+            'autocad': {
+                'enabled': True,
+                'port': 8011,
+                'config_path': 'project/MCP/config/autocad_config.yaml'
+            }
+        },
+        'graphics_servers': {
+            'photoshop': {
+                'enabled': True,
+                'port': 8021,
+                'config_path': 'project/MCP/config/photoshop_config.yaml'
+            },
+            'illustrator': {
+                'enabled': True,
+                'port': 8022,
+                'config_path': 'project/MCP/config/illustrator_config.yaml'
+            }
         }
     }
 
     # 合并默认配置和用户配置
-    for service in ['memory', 'task_manager']:
+    all_services = ['memory', 'task_manager', 'office_servers', 'cad_servers', 'graphics_servers']
+    for service in all_services:
         if service not in mcp_config:
             mcp_config[service] = default_mcp_config[service]
         else:
             # 确保必要的字段存在
-            for key, value in default_mcp_config[service].items():
-                if key not in mcp_config[service]:
-                    mcp_config[service][key] = value
+            if service in ['office_servers', 'cad_servers', 'graphics_servers']:
+                # 对于服务器配置，需要深度合并
+                for server_name, server_config in default_mcp_config[service].items():
+                    if server_name not in mcp_config[service]:
+                        mcp_config[service][server_name] = server_config
+                    else:
+                        for key, value in server_config.items():
+                            if key not in mcp_config[service][server_name]:
+                                mcp_config[service][server_name][key] = value
+            else:
+                # 对于简单配置，直接合并
+                for key, value in default_mcp_config[service].items():
+                    if key not in mcp_config[service]:
+                        mcp_config[service][key] = value
 
     return mcp_config
+
+
+def get_office_servers_config() -> Dict[str, Any]:
+    """获取Office服务器配置
+    
+    Returns:
+        Dict: Office服务器配置字典
+    """
+    mcp_config = get_mcp_config()
+    return mcp_config.get('office_servers', {})
+
+
+def get_cad_servers_config() -> Dict[str, Any]:
+    """获取CAD服务器配置
+    
+    Returns:
+        Dict: CAD服务器配置字典
+    """
+    mcp_config = get_mcp_config()
+    return mcp_config.get('cad_servers', {})
+
+
+def get_graphics_servers_config() -> Dict[str, Any]:
+    """获取Graphics服务器配置
+    
+    Returns:
+        Dict: Graphics服务器配置字典
+    """
+    mcp_config = get_mcp_config()
+    return mcp_config.get('graphics_servers', {})
+
+
+def get_all_mcp_servers_config() -> Dict[str, Any]:
+    """获取所有MCP服务器配置
+    
+    Returns:
+        Dict: 所有MCP服务器配置字典
+    """
+    mcp_config = get_mcp_config()
+    all_servers = {}
+    
+    # 合并所有服务器配置
+    for server_type in ['office_servers', 'cad_servers', 'graphics_servers']:
+        servers = mcp_config.get(server_type, {})
+        for server_name, server_config in servers.items():
+            all_servers[f"{server_type.split('_')[0]}_{server_name}"] = {
+                'type': server_type.split('_')[0],
+                'name': server_name,
+                **server_config
+            }
+    
+    return all_servers
 
 
 def _process_template_variables(

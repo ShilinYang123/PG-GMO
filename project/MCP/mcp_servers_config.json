@@ -1,0 +1,58 @@
+{
+  "office": {
+    "excel": {
+      "name": "Excel MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\office\\excel_mcp_server.py",
+      "port": 8001,
+      "status": "stopped"
+    },
+    "word": {
+      "name": "Word MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\office\\word_mcp_server.py",
+      "port": 8002,
+      "status": "stopped"
+    },
+    "powerpoint": {
+      "name": "PowerPoint MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\office\\powerpoint_mcp_server.py",
+      "port": 8003,
+      "status": "stopped"
+    }
+  },
+  "design": {
+    "photoshop": {
+      "name": "Photoshop MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\design\\photoshop_mcp_server.py",
+      "port": 8004,
+      "status": "stopped"
+    }
+  },
+  "cad": {
+    "autocad": {
+      "name": "AutoCAD MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\cad\\autocad_mcp_server.py",
+      "port": 8005,
+      "status": "stopped"
+    },
+    "general_cad": {
+      "name": "General CAD MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\cad\\general_cad_mcp_server.py",
+      "port": 8006,
+      "status": "stopped"
+    }
+  },
+  "graphics": {
+    "illustrator": {
+      "name": "Illustrator MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\graphics\\illustrator_mcp_server.py",
+      "port": 8007,
+      "status": "stopped"
+    },
+    "excalidraw": {
+      "name": "Excalidraw MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\graphics\\excalidraw_mcp_server.py",
+      "port": 8008,
+      "status": "stopped"
+    }
+  }
+}
