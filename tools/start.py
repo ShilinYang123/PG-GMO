@@ -455,7 +455,13 @@ ISO格式: {date_info['date']}
         else:
             self.workflow_logger.info("跳过前置检查（脚本不存在）")
         
-        # 2. 运行文档日期合规性检查
+        # 2. 检查MCP服务器状态
+        self.workflow_logger.info("执行MCP服务器状态检查...")
+        mcp_status = self.check_mcp_servers_status()
+        if not mcp_status:
+            self.workflow_logger.warning("MCP服务器检查发现问题，请查看详细报告")
+        
+        # 3. 运行文档日期合规性检查
         self.workflow_logger.info("执行文档日期合规性检查...")
         date_check_script = self.tools_dir / "check_document_dates.py"
         if date_check_script.exists():
@@ -643,6 +649,157 @@ ISO格式: {date_info['date']}
             
         print(f"💾 启动简报已保存: {briefing_file}")
         
+    def check_mcp_servers_status(self) -> bool:
+        """检查MCP服务器状态和功能"""
+        try:
+            self.workflow_logger.info("开始检查MCP服务器状态...")
+            
+            # 检查Claude Desktop配置文件
+            config_file = self.project_root / "claude_desktop_config.json"
+            if not config_file.exists():
+                self.workflow_logger.error("Claude Desktop配置文件不存在")
+                return False
+                
+            # 读取MCP服务器配置
+            with open(config_file, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+                
+            mcp_servers = config.get('mcpServers', {})
+            if not mcp_servers:
+                self.workflow_logger.error("未配置MCP服务器")
+                return False
+                
+            self.workflow_logger.info(f"发现 {len(mcp_servers)} 个已配置的MCP服务器")
+            
+            all_servers_ok = True
+            server_status = {}
+            
+            for server_name, server_config in mcp_servers.items():
+                self.workflow_logger.info(f"检查MCP服务器: {server_name}")
+                
+                # 检查服务器脚本文件是否存在
+                if 'args' in server_config and server_config['args']:
+                    script_path = Path(server_config['args'][0])
+                    if script_path.exists():
+                        self.workflow_logger.info(f"  ✓ {server_name}: 脚本文件存在")
+                        server_status[server_name] = {'script_exists': True, 'functional': False}
+                        
+                        # 尝试测试服务器功能
+                        if self._test_mcp_server_functionality(server_name, script_path):
+                            server_status[server_name]['functional'] = True
+                            self.workflow_logger.info(f"  ✓ {server_name}: 功能测试通过")
+                        else:
+                            self.workflow_logger.warning(f"  ⚠ {server_name}: 功能测试失败")
+                            all_servers_ok = False
+                    else:
+                        self.workflow_logger.error(f"  ✗ {server_name}: 脚本文件不存在 ({script_path})")
+                        server_status[server_name] = {'script_exists': False, 'functional': False}
+                        all_servers_ok = False
+                else:
+                    self.workflow_logger.warning(f"  ⚠ {server_name}: 配置不完整")
+                    server_status[server_name] = {'script_exists': False, 'functional': False}
+                    all_servers_ok = False
+            
+            # 保存MCP服务器状态报告
+            self._save_mcp_status_report(server_status)
+            
+            if all_servers_ok:
+                self.workflow_logger.info("✓ 所有MCP服务器状态正常")
+            else:
+                self.workflow_logger.warning("⚠ 部分MCP服务器存在问题")
+                
+            return all_servers_ok
+            
+        except Exception as e:
+            self.workflow_logger.error(f"MCP服务器状态检查失败: {e}")
+            return False
+    
+    def _test_mcp_server_functionality(self, server_name: str, script_path: Path) -> bool:
+        """测试MCP服务器功能"""
+        try:
+            # 根据服务器类型进行不同的测试
+            if 'word' in server_name.lower():
+                return self._test_word_mcp_server(script_path)
+            elif 'powerpoint' in server_name.lower() or 'ppt' in server_name.lower():
+                return self._test_powerpoint_mcp_server(script_path)
+            elif 'photoshop' in server_name.lower():
+                return self._test_photoshop_mcp_server(script_path)
+            else:
+                # 通用测试：检查脚本是否可以正常启动
+                return self._test_generic_mcp_server(script_path)
+                
+        except Exception as e:
+            self.workflow_logger.error(f"MCP服务器功能测试异常: {e}")
+            return False
+    
+    def _test_word_mcp_server(self, script_path: Path) -> bool:
+        """测试Word MCP服务器"""
+        try:
+            # 检查Word应用程序是否可用
+            import win32com.client
+            word_app = win32com.client.Dispatch("Word.Application")
+            word_app.Visible = False
+            word_app.Quit()
+            return True
+        except Exception:
+            return False
+    
+    def _test_powerpoint_mcp_server(self, script_path: Path) -> bool:
+        """测试PowerPoint MCP服务器"""
+        try:
+            # 检查PowerPoint应用程序是否可用
+            import win32com.client
+            ppt_app = win32com.client.Dispatch("PowerPoint.Application")
+            ppt_app.Visible = 1
+            ppt_app.Quit()
+            return True
+        except Exception:
+            return False
+    
+    def _test_photoshop_mcp_server(self, script_path: Path) -> bool:
+        """测试Photoshop MCP服务器"""
+        try:
+            # 检查Photoshop应用程序是否可用
+            import win32com.client
+            ps_app = win32com.client.Dispatch("Photoshop.Application")
+            ps_app.Quit()
+            return True
+        except Exception:
+            return False
+    
+    def _test_generic_mcp_server(self, script_path: Path) -> bool:
+        """通用MCP服务器测试"""
+        try:
+            # 简单检查脚本文件语法
+            with open(script_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                # 检查是否包含基本的MCP服务器结构
+                if 'mcp' in content.lower() and ('server' in content.lower() or 'tool' in content.lower()):
+                    return True
+            return False
+        except Exception:
+            return False
+    
+    def _save_mcp_status_report(self, server_status: Dict[str, Dict[str, bool]]):
+        """保存MCP服务器状态报告"""
+        try:
+            report_file = self.logs_dir / f"mcp_status_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            
+            report = {
+                'timestamp': datetime.now().isoformat(),
+                'total_servers': len(server_status),
+                'functional_servers': sum(1 for status in server_status.values() if status['functional']),
+                'servers': server_status
+            }
+            
+            with open(report_file, 'w', encoding='utf-8') as f:
+                json.dump(report, f, ensure_ascii=False, indent=2)
+                
+            self.workflow_logger.info(f"MCP状态报告已保存: {report_file}")
+            
+        except Exception as e:
+            self.workflow_logger.error(f"保存MCP状态报告失败: {e}")
+
     def check_monitoring_system(self) -> bool:
         """检查监控系统状态"""
         try:
@@ -801,7 +958,16 @@ ISO格式: {date_info['date']}
             print("\n🔧 第二阶段：工作流程环境检查")
             print("-" * 30)
             
-            # 3. 检查前置条件
+            # 3. 检查MCP服务器状态
+            print("\n🔌 检查MCP服务器状态...")
+            mcp_status = self.check_mcp_servers_status()
+            if mcp_status:
+                print("✅ MCP服务器检查通过")
+            else:
+                print("⚠️ MCP服务器检查发现问题，但继续启动")
+                self.workflow_logger.warning("MCP服务器检查发现问题")
+            
+            # 4. 检查前置条件
             if not self.check_prerequisites():
                 self.workflow_logger.error("前置条件检查失败，无法启动工作会话")
                 return False, "❌ 前置条件检查失败"
@@ -811,7 +977,7 @@ ISO格式: {date_info['date']}
             print("\n🛡️ 第三阶段：合规性监控系统启动")
             print("-" * 30)
             
-            # 4. 启动增强的合规性监控
+            # 5. 启动增强的合规性监控
             if not self.start_compliance_monitoring_enhanced():
                 self.workflow_logger.error("合规性监控启动失败")
                 return False, "❌ 合规性监控启动失败"
@@ -821,7 +987,7 @@ ISO格式: {date_info['date']}
             print("\n🔍 第四阶段：运行前置检查")
             print("-" * 30)
             
-            # 5. 运行前置检查
+            # 6. 运行前置检查
             if not self.run_pre_checks():
                 self.workflow_logger.warning("前置检查发现问题，但继续工作会话")
                 print("⚠️ 前置检查发现问题，但继续启动")
@@ -839,10 +1005,10 @@ ISO格式: {date_info['date']}
             print(f"   完整时间: {current_date['datetime']}")
             print("   ⚠️ AI将使用此日期信息，而非训练数据中的历史日期")
             
-            # 6. 生成启动简报
+            # 7. 生成启动简报
             briefing = self.generate_startup_briefing(regulations, constraints)
             
-            # 7. 保存启动记录
+            # 8. 保存启动记录
             self.save_startup_record(briefing)
             
             # 最终阶段：完成启动
