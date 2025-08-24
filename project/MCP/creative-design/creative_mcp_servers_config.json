@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "mcp-openai": {
+      "command": "python",
+      "args": [
+        "server.py"
+      ],
+      "cwd": "S:\\PG-GMO\\project\\MCP\\creative-design\\mcp-openai",
+      "env": {
+        "OPENAI_API_KEY": "your_openai_api_key_here"
+      }
+    },
+    "figma-mcp": {
+      "command": "node",
+      "args": [
+        "server.js"
+      ],
+      "cwd": "S:\\PG-GMO\\project\\MCP\\creative-design\\figma-mcp",
+      "env": {
+        "FIGMA_ACCESS_TOKEN": "your_figma_token_here"
+      }
+    },
+    "blender-mcp": {
+      "command": "python",
+      "args": [
+        "blender_server.py"
+      ],
+      "cwd": "S:\\PG-GMO\\project\\MCP\\creative-design\\blender-mcp",
+      "env": {
+        "BLENDER_PATH": "C:\\Program Files\\Blender Foundation\\Blender 4.0\\blender.exe"
+      }
+    },
+    "minimax-mcp": {
+      "command": "python",
+      "args": [
+        "minimax_server.py"
+      ],
+      "cwd": "S:\\PG-GMO\\project\\MCP\\creative-design\\minimax-mcp",
+      "env": {
+        "MINIMAX_API_KEY": "your_minimax_api_key_here"
+      }
+    }
+  }
+}

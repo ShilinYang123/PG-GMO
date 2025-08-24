@@ -1,0 +1,48 @@
+{
+  "name": "数据处理类MCP工具集合（更新版）",
+  "description": "包含向量数据库、金融数据、文档转换、数据库访问和CSV分析等数据处理工具",
+  "version": "2.0.0",
+  "created_at": "2025-08-24T23:14:24.432336",
+  "tools": {
+    "qdrant_vector_db": {
+      "name": "Qdrant向量数据库服务器",
+      "type": "local",
+      "status": "warning",
+      "description": "本地向量数据库服务，支持语义搜索和向量存储",
+      "local_file": "local_qdrant_mcp_server.py",
+      "usage": "python local_qdrant_mcp_server.py"
+    },
+    "financial_datasets": {
+      "name": "Financial Datasets金融数据服务器",
+      "type": "remote",
+      "status": "error",
+      "description": "提供股票、财务报表等金融数据访问",
+      "directory": "financial_datasets",
+      "repository": "https://github.com/modelcontextprotocol/servers.git"
+    },
+    "markdownify": {
+      "name": "Markdownify文档转换服务器",
+      "type": "remote",
+      "status": "error",
+      "description": "将网页、HTML、PDF等转换为Markdown格式",
+      "directory": "markdownify",
+      "repository": "https://github.com/modelcontextprotocol/servers.git"
+    },
+    "database_mcp": {
+      "name": "数据库MCP服务器集合",
+      "type": "local",
+      "status": "warning",
+      "description": "本地数据库访问服务，支持SQLite、MySQL、PostgreSQL等",
+      "local_file": "local_database_mcp_server.py",
+      "usage": "python local_database_mcp_server.py"
+    },
+    "csv_explorer": {
+      "name": "CSV数据探索服务器",
+      "type": "local",
+      "status": "warning",
+      "description": "本地CSV文件分析和探索工具",
+      "local_file": "local_csv_explorer_server.py",
+      "usage": "python local_csv_explorer_server.py"
+    }
+  }
+}

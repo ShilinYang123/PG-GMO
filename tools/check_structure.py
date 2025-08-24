@@ -90,9 +90,11 @@ class EnhancedStructureChecker:
                 # 注意：移除"env"以避免.env文件被错误排除
             ],
         )
-        # 强制移除.env以避免.env文件被错误排除
+        # 强制移除.env和.vscode以避免被错误排除
         if ".env" in excluded_dirs_list:
             excluded_dirs_list.remove(".env")
+        if ".vscode" in excluded_dirs_list:
+            excluded_dirs_list.remove(".vscode")
         self.excluded_dirs = set(excluded_dirs_list)
 
         self.excluded_files = set(
@@ -410,7 +412,7 @@ class EnhancedStructureChecker:
             return False
 
     def should_exclude_path(self, path: Path) -> bool:
-        """判断路径是否应该被排除（与update_structure.py保持一致）
+        """判断路径是否应该被排除（与update_structure.py完全一致）
 
         Args:
             path: 要检查的路径
@@ -419,37 +421,38 @@ class EnhancedStructureChecker:
             True 如果应该排除，False 否则
         """
         # 排除隐藏目录和文件（除了特定的配置文件）
-        if path.name.startswith(".") and path.name not in {
-            ".env",
-            ".env.local",
-            ".env.production",
-            ".env.template",
-            ".env.example",
-            ".env.sqlserver",
-            ".gitignore",
-            ".dockerignore",
-            ".eslintrc.js",
-            ".prettierrc",
-            ".pre-commit-config.yaml",
-            ".devcontainer",
-            ".github",
-            ".venv",
-            ".cache",
-            ".coverage",
-            ".pytest_cache",
-            ".vscode",
-        }:
-            self.logger.debug(f"排除隐藏路径: {path}")
-            return True
+        if path.name.startswith("."):
+            # 允许特定的配置文件和目录
+            allowed_hidden = {
+                ".env",
+                ".env.local",
+                ".env.production",
+                ".env.template",
+                ".env.example",
+                ".env.sqlserver",
+                ".gitignore",
+                ".dockerignore",
+                ".eslintrc.js",
+                ".prettierrc",
+                ".pre-commit-config.yaml",
+                ".devcontainer",
+                ".github",
+                ".venv",
+                ".cache",
+                ".coverage",
+                ".pytest_cache",
+                ".vscode",
+            }
+            if path.name not in allowed_hidden:
+                return True  # 排除不在允许列表中的隐藏文件/目录
+            # 如果在允许列表中，继续检查其他条件，不直接返回
 
         # 排除特定目录
         if path.name in self.excluded_dirs:
-            self.logger.debug(f"排除特定目录: {path} (名称: {path.name}, 是否为目录: {path.is_dir()}, excluded_dirs: {self.excluded_dirs})")
             return True
 
         # 排除特定文件
         if path.is_file() and path.name in self.excluded_files:
-            self.logger.debug(f"排除特定文件: {path}")
             return True
 
         return False

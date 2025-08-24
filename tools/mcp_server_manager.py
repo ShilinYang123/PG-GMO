@@ -76,6 +76,12 @@ class MCPServerManager:
                     "path": self.mcp_dir / "graphics" / "illustrator-mcp-windows" / "src" / "illustrator" / "illustrator" / "server.py",
                     "port": 8007,
                     "status": "stopped"
+                },
+                "modelscope_windows": {
+                    "name": "ModelScope Windows MCP Server",
+                    "path": self.mcp_dir / "graphics" / "mcp-windows" / "server.py",
+                    "port": 8009,
+                    "status": "stopped"
                 }
             }
         }
@@ -198,6 +204,8 @@ class MCPServerManager:
         
         # 生成状态报告
         report = self.generate_status_report()
+        print(report)
+        
         print(report)
         
         # 保存状态报告

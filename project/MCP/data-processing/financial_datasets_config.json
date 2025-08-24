@@ -1,0 +1,125 @@
+{
+  "name": "Financial Datasets金融数据服务器",
+  "description": "提供股票市场数据访问的MCP服务器，支持财务报表、股价和市场新闻获取",
+  "version": "1.0.0",
+  "type": "financial_data",
+  "repository": "https://github.com/financial-datasets/mcp-server",
+  "category": "数据处理",
+  "features": [
+    "股票价格查询",
+    "收入报表获取",
+    "资产负债表查询",
+    "现金流量表分析",
+    "市场新闻获取",
+    "实时金融数据",
+    "历史数据分析",
+    "多市场支持"
+  ],
+  "installation_steps": [
+    "克隆仓库: git clone https://github.com/financial-datasets/mcp-server.git",
+    "创建虚拟环境: uv venv",
+    "激活环境: source .venv/bin/activate (Linux/Mac) 或 .venv\\Scripts\\activate (Windows)",
+    "安装依赖: uv add mcp[cli] httpx",
+    "配置API密钥",
+    "启动MCP服务器"
+  ],
+  "api_endpoints": {
+    "get_stock_price": "获取股票当前价格",
+    "get_income_statement": "获取公司收入报表",
+    "get_balance_sheet": "获取资产负债表",
+    "get_cash_flow": "获取现金流量表",
+    "get_market_news": "获取市场新闻",
+    "search_companies": "搜索公司信息"
+  },
+  "supported_markets": [
+    "NYSE",
+    "NASDAQ",
+    "LSE",
+    "TSE",
+    "HKEX",
+    "SSE",
+    "SZSE"
+  ],
+  "configuration": {
+    "api_key": "your_financial_datasets_api_key",
+    "base_url": "https://api.financialdatasets.ai",
+    "timeout": 30,
+    "max_retries": 3
+  },
+  "environment_variables": {
+    "FINANCIAL_DATASETS_API_KEY": "Financial Datasets API密钥",
+    "FD_BASE_URL": "API基础URL（可选）",
+    "FD_TIMEOUT": "请求超时时间（秒）",
+    "FD_MAX_RETRIES": "最大重试次数"
+  },
+  "claude_desktop_config": {
+    "mcpServers": {
+      "financial-datasets": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "mcp-remote",
+          "https://mcp.financialdatasets.ai/mcp"
+        ],
+        "icon": "https://www.financialdatasets.ai/favicon.ico"
+      }
+    }
+  },
+  "remote_server": {
+    "streamable_http": "https://mcp.financialdatasets.ai/mcp",
+    "sse_server": "https://mcp.financialdatasets.ai/sse",
+    "authentication": "API密钥认证"
+  },
+  "use_cases": [
+    {
+      "name": "投资研究",
+      "description": "获取公司财务数据进行投资分析",
+      "example": "分析苹果公司(AAPL)的财务状况"
+    },
+    {
+      "name": "市场监控",
+      "description": "实时监控股票价格变化",
+      "example": "跟踪科技股的价格走势"
+    },
+    {
+      "name": "财务报告",
+      "description": "生成公司财务分析报告",
+      "example": "创建季度财务对比报告"
+    },
+    {
+      "name": "新闻分析",
+      "description": "结合市场新闻进行情绪分析",
+      "example": "分析新闻对股价的影响"
+    }
+  ],
+  "data_types": {
+    "stock_prices": {
+      "fields": ["open", "high", "low", "close", "volume", "timestamp"],
+      "frequency": "实时/日线/周线/月线"
+    },
+    "financial_statements": {
+      "income_statement": ["revenue", "net_income", "eps", "operating_income"],
+      "balance_sheet": ["total_assets", "total_liabilities", "shareholders_equity"],
+      "cash_flow": ["operating_cash_flow", "investing_cash_flow", "financing_cash_flow"]
+    },
+    "market_news": {
+      "fields": ["title", "summary", "url", "published_date", "sentiment"],
+      "sources": ["Reuters", "Bloomberg", "MarketWatch", "Yahoo Finance"]
+    }
+  },
+  "pricing": {
+    "free_tier": {
+      "requests_per_month": 1000,
+      "features": ["基础股价数据", "有限历史数据"]
+    },
+    "pro_tier": {
+      "requests_per_month": 10000,
+      "features": ["完整财务报表", "实时数据", "新闻API"]
+    }
+  },
+  "status": "待安装",
+  "installation_date": null,
+  "last_updated": "2025-08-24",
+  "documentation": "https://docs.financialdatasets.ai/mcp-server",
+  "api_docs": "https://docs.financialdatasets.ai/"
+}

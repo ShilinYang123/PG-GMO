@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "word-document-server": {
+      "command": "C:\\Users\\YDS-workroom\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "args": [
+        "S:\\PG-GMO\\project\\MCP\\office\\word-mcp\\word_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "S:\\PG-GMO\\project\\MCP\\office\\word-mcp",
+        "MCP_TRANSPORT": "stdio"
+      }
+    }
+  }
+}

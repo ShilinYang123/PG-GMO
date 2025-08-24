@@ -53,6 +53,12 @@
       "path": "s:\\PG-GMO\\project\\MCP\\graphics\\excalidraw_mcp_server.py",
       "port": 8008,
       "status": "stopped"
+    },
+    "modelscope_windows": {
+      "name": "ModelScope Windows MCP Server",
+      "path": "s:\\PG-GMO\\project\\MCP\\graphics\\mcp-windows\\server.py",
+      "port": 8009,
+      "status": "stopped"
     }
   }
 }

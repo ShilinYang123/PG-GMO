@@ -1,0 +1,166 @@
+{
+  "name": "CSV数据探索服务器",
+  "description": "专门用于处理和分析大型CSV文件的MCP服务器，突破传统上下文窗口限制",
+  "version": "1.0.0",
+  "type": "csv_processing",
+  "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/csv",
+  "category": "数据处理",
+  "features": [
+    "大型CSV文件处理",
+    "数据统计分析",
+    "列数据类型检测",
+    "缺失值分析",
+    "数据分布统计",
+    "相关性分析",
+    "数据可视化建议",
+    "数据清洗建议",
+    "分块读取处理",
+    "内存优化处理"
+  ],
+  "installation_steps": [
+    "安装MCP CLI: pip install mcp",
+    "克隆服务器仓库: git clone https://github.com/modelcontextprotocol/servers.git",
+    "进入CSV服务器目录: cd servers/src/csv",
+    "安装依赖: pip install -r requirements.txt",
+    "配置服务器参数",
+    "启动MCP服务器"
+  ],
+  "api_endpoints": {
+    "load_csv": "加载CSV文件",
+    "get_info": "获取文件基本信息",
+    "describe_data": "数据统计描述",
+    "get_columns": "获取列信息",
+    "sample_data": "获取数据样本",
+    "search_data": "搜索特定数据",
+    "filter_data": "数据筛选",
+    "aggregate_data": "数据聚合分析",
+    "export_subset": "导出数据子集"
+  },
+  "supported_operations": {
+    "data_exploration": {
+      "basic_info": "行数、列数、文件大小",
+      "column_types": "数据类型自动检测",
+      "missing_values": "缺失值统计和分布",
+      "unique_values": "唯一值计数",
+      "data_range": "数值范围和分布"
+    },
+    "statistical_analysis": {
+      "descriptive_stats": "均值、中位数、标准差等",
+      "correlation_matrix": "变量间相关性分析",
+      "distribution_analysis": "数据分布特征",
+      "outlier_detection": "异常值检测",
+      "trend_analysis": "趋势分析"
+    },
+    "data_manipulation": {
+      "filtering": "基于条件的数据筛选",
+      "sorting": "数据排序",
+      "grouping": "分组聚合",
+      "sampling": "随机采样",
+      "transformation": "数据转换"
+    }
+  },
+  "configuration": {
+    "max_file_size": "1GB",
+    "chunk_size": 10000,
+    "memory_limit": "512MB",
+    "encoding": "utf-8",
+    "delimiter": "auto_detect",
+    "quote_char": '"',
+    "escape_char": "\\",
+    "skip_rows": 0,
+    "max_columns": 1000
+  },
+  "environment_variables": {
+    "CSV_MAX_FILE_SIZE": "最大文件大小限制",
+    "CSV_CHUNK_SIZE": "分块读取大小",
+    "CSV_MEMORY_LIMIT": "内存使用限制",
+    "CSV_TEMP_DIR": "临时文件目录",
+    "CSV_CACHE_ENABLED": "是否启用缓存"
+  },
+  "claude_desktop_config": {
+    "mcpServers": {
+      "csv-explorer": {
+        "command": "python",
+        "args": [
+          "/absolute/path/to/csv-server/main.py"
+        ],
+        "env": {
+          "CSV_MAX_FILE_SIZE": "1073741824",
+          "CSV_CHUNK_SIZE": "10000"
+        }
+      }
+    }
+  },
+  "performance_features": {
+    "lazy_loading": "按需加载数据",
+    "streaming_processing": "流式处理大文件",
+    "memory_mapping": "内存映射文件访问",
+    "parallel_processing": "并行数据处理",
+    "caching": "智能缓存机制",
+    "compression": "数据压缩存储"
+  },
+  "data_quality_checks": {
+    "encoding_detection": "自动检测文件编码",
+    "delimiter_detection": "自动检测分隔符",
+    "data_type_inference": "智能数据类型推断",
+    "consistency_checks": "数据一致性检查",
+    "completeness_analysis": "数据完整性分析",
+    "validity_checks": "数据有效性验证"
+  },
+  "use_cases": [
+    {
+      "name": "大数据集探索",
+      "description": "快速了解大型CSV文件的结构和内容",
+      "example": "分析包含百万行的销售数据"
+    },
+    {
+      "name": "数据质量评估",
+      "description": "检查数据完整性和质量问题",
+      "example": "识别缺失值和异常数据模式"
+    },
+    {
+      "name": "预处理分析",
+      "description": "为机器学习准备数据",
+      "example": "特征工程和数据清洗建议"
+    },
+    {
+      "name": "业务分析",
+      "description": "从CSV数据中提取业务洞察",
+      "example": "客户行为分析和趋势识别"
+    }
+  ],
+  "output_formats": {
+    "summary_reports": "数据摘要报告",
+    "statistical_tables": "统计表格",
+    "visualization_code": "可视化代码生成",
+    "data_profiles": "数据画像报告",
+    "quality_reports": "数据质量报告"
+  },
+  "integration_capabilities": {
+    "pandas_compatible": "与Pandas兼容",
+    "numpy_integration": "NumPy数组支持",
+    "matplotlib_charts": "图表生成建议",
+    "seaborn_plots": "统计图表建议",
+    "jupyter_notebooks": "Jupyter笔记本集成"
+  },
+  "error_handling": {
+    "malformed_data": "处理格式错误的数据",
+    "encoding_issues": "编码问题自动修复",
+    "memory_overflow": "内存溢出保护",
+    "timeout_handling": "超时处理机制",
+    "graceful_degradation": "优雅降级处理"
+  },
+  "security_features": {
+    "file_validation": "文件安全验证",
+    "path_sanitization": "路径安全检查",
+    "size_limits": "文件大小限制",
+    "access_control": "访问权限控制",
+    "audit_logging": "操作审计日志"
+  },
+  "status": "待安装",
+  "installation_date": null,
+  "last_updated": "2025-08-24",
+  "documentation": "https://modelcontextprotocol.io/servers/csv",
+  "github_stars": "500+",
+  "community_support": "活跃"
+}

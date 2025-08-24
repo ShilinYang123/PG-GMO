@@ -1,0 +1,268 @@
+{
+  "name": "Creative Design MCP Tools",
+  "version": "1.0.0",
+  "description": "创意设计类MCP工具集合",
+  "created_at": "2025-08-24T22:46:13.961419",
+  "servers": [
+    {
+      "name": "MCP-OpenAI服务",
+      "description": "基于MCP协议的中间件，让Claude能直接调用OpenAI的各种模型，支持GPT-3.5/4对话和DALL·E 2/3图像生成",
+      "version": "1.0.0",
+      "type": "image_generation",
+      "repository": "https://github.com/donghao1393/mcp-openai",
+      "category": "创意设计",
+      "features": [
+        "GPT-3.5/4模型对话",
+        "DALL·E 2图像生成",
+        "DALL·E 3图像生成",
+        "对话中直接显示生成图片",
+        "多模型协同工作",
+        "配置灵活",
+        "性能稳定"
+      ],
+      "installation_steps": [
+        "克隆仓库: git clone https://github.com/donghao1393/mcp-openai.git",
+        "进入目录: cd mcp-openai",
+        "安装依赖: pip install -r requirements.txt",
+        "配置OpenAI API密钥",
+        "启动MCP服务器",
+        "配置Claude Desktop连接"
+      ],
+      "api_endpoints": {
+        "text_generation": "/api/v1/chat/completions",
+        "image_generation": "/api/v1/images/generations",
+        "model_list": "/api/v1/models"
+      },
+      "supported_models": {
+        "text": [
+          "gpt-3.5-turbo",
+          "gpt-4",
+          "gpt-4-turbo"
+        ],
+        "image": [
+          "dall-e-2",
+          "dall-e-3"
+        ]
+      },
+      "configuration": {
+        "openai_api_key": "your_openai_api_key_here",
+        "server_port": 8000,
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "image_size": "1024x1024",
+        "image_quality": "standard"
+      },
+      "status": "部分安装",
+      "install_date": "2025-08-24 22:37:58",
+      "documentation": "https://github.com/donghao1393/mcp-openai/blob/main/README.md"
+    },
+    {
+      "name": "Figma MCP服务器",
+      "description": "通过Model Context Protocol实现设计与AI集成，支持设计到代码的自动化转换",
+      "version": "1.0.0",
+      "type": "design_automation",
+      "repository": "https://github.com/figma/figma-mcp",
+      "category": "UI/UX设计",
+      "features": [
+        "设计到代码自动转换",
+        "Figma文件读取和解析",
+        "组件库管理",
+        "设计规范检查",
+        "批量设计操作",
+        "设计版本控制",
+        "团队协作支持"
+      ],
+      "installation_steps": [
+        "搜索并克隆Figma MCP仓库",
+        "安装Node.js依赖",
+        "配置Figma API访问令牌",
+        "设置MCP服务器配置",
+        "启动服务器",
+        "在Claude Desktop中配置连接"
+      ],
+      "api_endpoints": {
+        "get_file": "/api/figma/files/{file_key}",
+        "get_components": "/api/figma/files/{file_key}/components",
+        "export_assets": "/api/figma/files/{file_key}/export",
+        "generate_code": "/api/figma/code-gen"
+      },
+      "supported_formats": [
+        "React组件",
+        "Vue组件",
+        "HTML/CSS",
+        "Flutter Widget",
+        "SwiftUI",
+        "Android XML"
+      ],
+      "configuration": {
+        "figma_access_token": "your_figma_token_here",
+        "server_port": 8001,
+        "export_format": "png",
+        "code_style": "typescript",
+        "component_naming": "camelCase"
+      },
+      "status": "安装失败",
+      "install_date": null,
+      "documentation": "https://www.figma.com/developers/api"
+    },
+    {
+      "name": "BlenderMCP",
+      "description": "通过MCP协议连接Blender实现AI控制，支持3D建模、动画、渲染自动化",
+      "version": "1.0.0",
+      "type": "3d_modeling",
+      "repository": "https://github.com/blender-mcp/blender-mcp",
+      "category": "3D创意设计",
+      "features": [
+        "3D模型创建和编辑",
+        "材质和纹理管理",
+        "动画制作",
+        "渲染控制",
+        "场景管理",
+        "脚本自动化",
+        "插件集成",
+        "批量处理"
+      ],
+      "installation_steps": [
+        "确保已安装Blender 3.0+",
+        "克隆BlenderMCP仓库",
+        "安装Python依赖",
+        "配置Blender Python路径",
+        "安装Blender插件",
+        "启动MCP服务器",
+        "配置Claude Desktop连接"
+      ],
+      "api_endpoints": {
+        "create_object": "/api/blender/objects/create",
+        "modify_object": "/api/blender/objects/{object_id}/modify",
+        "render_scene": "/api/blender/render",
+        "export_model": "/api/blender/export",
+        "import_model": "/api/blender/import",
+        "animation_control": "/api/blender/animation"
+      },
+      "supported_formats": {
+        "import": [
+          "obj",
+          "fbx",
+          "dae",
+          "ply",
+          "stl",
+          "gltf"
+        ],
+        "export": [
+          "obj",
+          "fbx",
+          "dae",
+          "ply",
+          "stl",
+          "gltf",
+          "blend"
+        ]
+      },
+      "configuration": {
+        "blender_path": "C:\\Program Files\\Blender Foundation\\Blender 4.0\\blender.exe",
+        "server_port": 8002,
+        "render_engine": "CYCLES",
+        "render_samples": 128,
+        "output_format": "PNG",
+        "resolution_x": 1920,
+        "resolution_y": 1080
+      },
+      "requirements": {
+        "blender_version": ">=3.0",
+        "python_version": ">=3.9",
+        "system_ram": ">=8GB",
+        "gpu_support": "CUDA或OpenCL（可选）"
+      },
+      "status": "安装失败",
+      "install_date": null,
+      "documentation": "https://docs.blender.org/api/current/"
+    },
+    {
+      "name": "MiniMax MCP服务器",
+      "description": "官方MCP服务器，支持与强大的文本转语音、视频/图像生成API交互，适用于多种客户端工具",
+      "version": "1.0.0",
+      "type": "multimedia_generation",
+      "repository": "https://github.com/minimax-ai/minimax-mcp",
+      "category": "多媒体生成",
+      "features": [
+        "文本转语音(TTS)",
+        "视频生成",
+        "图像生成",
+        "多语言语音合成",
+        "高质量音频输出",
+        "视频编辑和处理",
+        "批量媒体生成",
+        "实时流媒体支持"
+      ],
+      "installation_steps": [
+        "注册MiniMax开发者账号",
+        "获取API密钥",
+        "克隆MiniMax MCP仓库",
+        "安装依赖: npm install 或 pip install -r requirements.txt",
+        "配置API密钥和服务器设置",
+        "启动MCP服务器",
+        "在Claude Desktop或Cursor中配置连接"
+      ],
+      "api_endpoints": {
+        "text_to_speech": "/api/v1/tts",
+        "video_generation": "/api/v1/video/generate",
+        "image_generation": "/api/v1/image/generate",
+        "voice_cloning": "/api/v1/voice/clone",
+        "media_processing": "/api/v1/media/process"
+      },
+      "supported_languages": [
+        "中文（普通话）",
+        "英语",
+        "日语",
+        "韩语",
+        "法语",
+        "德语",
+        "西班牙语"
+      ],
+      "configuration": {
+        "minimax_api_key": "your_minimax_api_key_here",
+        "server_port": 8003,
+        "voice_model": "speech-01",
+        "video_model": "video-01",
+        "image_model": "abab6.5s-chat",
+        "output_format": {
+          "audio": "mp3",
+          "video": "mp4",
+          "image": "png"
+        },
+        "quality": "high",
+        "max_duration": 300
+      },
+      "pricing": {
+        "tts": "按字符计费",
+        "video": "按秒计费",
+        "image": "按张计费"
+      },
+      "status": "installed",
+      "install_date": "2025-08-24 22:37:58",
+      "documentation": "https://www.minimaxi.com/document/guides/chat-pro",
+      "last_updated": "2025-08-24T22:46:12.628418"
+    },
+    {
+      "name": "Local Figma MCP Server",
+      "type": "local",
+      "file": "local_figma_mcp_server.py",
+      "description": "本地Figma设计工具服务器",
+      "status": "available"
+    },
+    {
+      "name": "Local Blender MCP Server",
+      "type": "local",
+      "file": "local_blender_mcp_server.py",
+      "description": "本地Blender 3D建模服务器",
+      "status": "available"
+    },
+    {
+      "name": "Local ADB MCP Server",
+      "type": "local",
+      "file": "local_adb_mcp_server.py",
+      "description": "本地Android设备控制服务器",
+      "status": "available"
+    }
+  ]
+}

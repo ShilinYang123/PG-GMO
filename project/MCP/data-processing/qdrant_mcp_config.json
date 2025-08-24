@@ -1,0 +1,106 @@
+{
+  "name": "Qdrant向量数据库服务器",
+  "description": "官方Qdrant MCP服务器实现，提供向量搜索、语义检索和文档存储功能",
+  "version": "0.6.0",
+  "type": "vector_database",
+  "repository": "https://github.com/qdrant/mcp-server-qdrant",
+  "category": "数据处理",
+  "features": [
+    "向量存储和检索",
+    "语义搜索",
+    "文档嵌入",
+    "相似性搜索",
+    "代码片段搜索",
+    "知识库构建",
+    "RAG应用支持",
+    "多种嵌入模型支持"
+  ],
+  "installation_steps": [
+    "安装Python包: pip install mcp-server-qdrant",
+    "或使用uv: uv add mcp-server-qdrant",
+    "配置Qdrant服务器连接",
+    "设置集合名称和嵌入模型",
+    "启动MCP服务器",
+    "配置Claude Desktop连接"
+  ],
+  "api_endpoints": {
+    "store_info": "存储信息到向量数据库",
+    "find_info": "基于语义搜索查找信息",
+    "list_collections": "列出所有集合",
+    "delete_info": "删除存储的信息"
+  },
+  "supported_models": {
+    "embedding": [
+      "sentence-transformers/all-MiniLM-L6-v2",
+      "sentence-transformers/all-mpnet-base-v2",
+      "BAAI/bge-small-en-v1.5",
+      "BAAI/bge-base-en-v1.5"
+    ]
+  },
+  "configuration": {
+    "qdrant_url": "http://localhost:6333",
+    "qdrant_api_key": "your_qdrant_api_key",
+    "collection_name": "default_collection",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "qdrant_local_path": "/tmp/qdrant-local"
+  },
+  "environment_variables": {
+    "QDRANT_URL": "Qdrant服务器URL",
+    "QDRANT_API_KEY": "Qdrant API密钥",
+    "COLLECTION_NAME": "默认集合名称",
+    "EMBEDDING_MODEL": "嵌入模型名称",
+    "QDRANT_LOCAL_PATH": "本地Qdrant数据库路径"
+  },
+  "claude_desktop_config": {
+    "mcpServers": {
+      "qdrant": {
+        "command": "uv",
+        "args": [
+          "run",
+          "mcp-server-qdrant",
+          "--collection-name",
+          "claude_memory",
+          "--qdrant-local-path",
+          "/tmp/qdrant-local"
+        ]
+      }
+    }
+  },
+  "use_cases": [
+    {
+      "name": "代码搜索工具",
+      "description": "为IDE提供语义代码搜索功能",
+      "config": {
+        "collection_name": "code-snippets",
+        "tool_description": "存储和检索可重用代码片段"
+      }
+    },
+    {
+      "name": "文档知识库",
+      "description": "构建企业文档检索系统",
+      "config": {
+        "collection_name": "documents",
+        "embedding_model": "sentence-transformers/all-mpnet-base-v2"
+      }
+    },
+    {
+      "name": "对话记忆",
+      "description": "为AI助手提供长期记忆功能",
+      "config": {
+        "collection_name": "conversation_memory",
+        "qdrant_local_path": "./memory_db"
+      }
+    }
+  ],
+  "docker_support": {
+    "enabled": true,
+    "image": "qdrant/qdrant:latest",
+    "ports": ["6333:6333", "6334:6334"],
+    "volumes": ["./qdrant_storage:/qdrant/storage"]
+  },
+  "status": "待安装",
+  "installation_date": null,
+  "last_updated": "2025-08-24",
+  "documentation": "https://github.com/qdrant/mcp-server-qdrant/blob/main/README.md",
+  "pypi_package": "https://pypi.org/project/mcp-server-qdrant/"
+}

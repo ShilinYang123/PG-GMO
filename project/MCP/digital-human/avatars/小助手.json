@@ -1,0 +1,9 @@
+{
+  "id": "小助手",
+  "name": "小助手",
+  "type": "wav2lip",
+  "voice_id": "zh-CN-XiaoxiaoNeural",
+  "personality": "友好、专业的AI助手",
+  "created_at": "298413.9061902",
+  "status": "active"
+}

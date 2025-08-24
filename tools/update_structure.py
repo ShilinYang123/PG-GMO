@@ -189,27 +189,31 @@ class DirectoryStructureGenerator:
         """判断是否应该排除某个路径（与check_structure.py保持一致）"""
 
         # 排除隐藏目录和文件（除了特定的配置文件）
-        if path.name.startswith(".") and path.name not in {
-            ".env",
-            ".env.local",
-            ".env.production",
-            ".env.template",
-            ".env.example",
-            ".env.sqlserver",
-            ".gitignore",
-            ".dockerignore",
-            ".eslintrc.js",
-            ".prettierrc",
-            ".pre-commit-config.yaml",
-            ".devcontainer",
-            ".github",
-            ".venv",
-            ".cache",
-            ".coverage",
-            ".pytest_cache",
-            ".vscode",
-        }:
-            return True
+        if path.name.startswith("."):
+            # 允许特定的配置文件和目录
+            allowed_hidden = {
+                ".env",
+                ".env.local",
+                ".env.production",
+                ".env.template",
+                ".env.example",
+                ".env.sqlserver",
+                ".gitignore",
+                ".dockerignore",
+                ".eslintrc.js",
+                ".prettierrc",
+                ".pre-commit-config.yaml",
+                ".devcontainer",
+                ".github",
+                ".venv",
+                ".cache",
+                ".coverage",
+                ".pytest_cache",
+                ".vscode",
+            }
+            if path.name not in allowed_hidden:
+                return True  # 排除不在允许列表中的隐藏文件/目录
+            # 如果在允许列表中，继续检查其他条件，不直接返回
 
         # 排除特定目录
         if path.name in self.excluded_dirs:
