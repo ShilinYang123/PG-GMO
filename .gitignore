@@ -7,6 +7,16 @@ bak\**\*
 !bak\待清理资料\
 !bak\常规备份\
 
+# 排除子模块和嵌入的Git仓库
+bak/github_repo/
+bak/专项备份/WatermarkRemover_UI完善版_20250920_094805/
+tools/MCP/collaboration/apifox/
+tools/MCP/creative-design/minimax-mcp/
+tools/MCP/data-processing/financial_datasets/temp_repo/
+tools/MCP/data-processing/maigret/maigret/
+tools/MCP/data-processing/markdownify/temp_repo/
+tools/WatermarkRemover/
+
 # 排除大文件
 *.zip
 *.rar
