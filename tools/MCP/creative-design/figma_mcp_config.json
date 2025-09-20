@@ -1,0 +1,49 @@
+{
+  "name": "Figma MCP服务器",
+  "description": "通过Model Context Protocol实现设计与AI集成，支持设计到代码的自动化转换",
+  "version": "1.0.0",
+  "type": "design_automation",
+  "repository": "https://github.com/figma/figma-mcp",
+  "category": "UI/UX设计",
+  "features": [
+    "设计到代码自动转换",
+    "Figma文件读取和解析",
+    "组件库管理",
+    "设计规范检查",
+    "批量设计操作",
+    "设计版本控制",
+    "团队协作支持"
+  ],
+  "installation_steps": [
+    "搜索并克隆Figma MCP仓库",
+    "安装Node.js依赖",
+    "配置Figma API访问令牌",
+    "设置MCP服务器配置",
+    "启动服务器",
+    "在Claude Desktop中配置连接"
+  ],
+  "api_endpoints": {
+    "get_file": "/api/figma/files/{file_key}",
+    "get_components": "/api/figma/files/{file_key}/components",
+    "export_assets": "/api/figma/files/{file_key}/export",
+    "generate_code": "/api/figma/code-gen"
+  },
+  "supported_formats": [
+    "React组件",
+    "Vue组件",
+    "HTML/CSS",
+    "Flutter Widget",
+    "SwiftUI",
+    "Android XML"
+  ],
+  "configuration": {
+    "figma_access_token": "your_figma_token_here",
+    "server_port": 8001,
+    "export_format": "png",
+    "code_style": "typescript",
+    "component_naming": "camelCase"
+  },
+  "status": "安装失败",
+  "install_date": null,
+  "documentation": "https://www.figma.com/developers/api"
+}

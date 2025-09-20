@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "windows-system": {
+      "command": "python",
+      "args": [
+        "s:\\PG-GMO\\tools\\MCP\\servers\\windows-system\\server.py"
+      ],
+      "env": {
+        "FASTMCP_HOST": "127.0.0.1",
+        "FASTMCP_PORT": "8010",
+        "FASTMCP_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

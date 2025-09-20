@@ -1,0 +1,123 @@
+{
+  "name": "市场情报收集工作流",
+  "version": 1,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "search",
+        "query": "小家电市场趋势 {{ $json.country }}",
+        "maxResults": 5
+      },
+      "id": "2",
+      "name": "Google Search",
+      "type": "n8n-nodes-base.googleSearch",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": "{{$parameter[\"sheetId\"]}}",
+        "sheetName": "市场情报",
+        "columns": [
+          {
+            "column": "标题",
+            "value": "={{ $json.title }}"
+          },
+          {
+            "column": "链接",
+            "value": "={{ $json.link }}"
+          },
+          {
+            "column": "摘要",
+            "value": "={{ $json.snippet }}"
+          },
+          {
+            "column": "日期",
+            "value": "={{ new Date() }}"
+          }
+        ]
+      },
+      "id": "3",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 1,
+              "unit": "days"
+            }
+          ]
+        },
+        "resource": "sheet",
+        "sheetId": "1BkL6X5j0X8tQ1J5X1J5X1J5X1J5X1J5X1J5X1J5X1J5"
+      },
+      "id": "4",
+      "name": "定时触发器",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Search": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "定时触发器": {
+      "main": [
+        [
+          {
+            "node": "Google Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

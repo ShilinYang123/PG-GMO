@@ -1,0 +1,35 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 8080,
+    "debug": true
+  },
+  "digital_human": {
+    "default_avatar": "default",
+    "supported_formats": [
+      "wav2lip",
+      "ernerf",
+      "musetalk"
+    ],
+    "output_format": "mp4",
+    "resolution": "512x512"
+  },
+  "tts": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "+0%",
+    "volume": "+0%"
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-3.5-turbo",
+    "api_key": "",
+    "base_url": "https://api.openai.com/v1"
+  },
+  "features": {
+    "real_time_interaction": true,
+    "voice_cloning": false,
+    "emotion_control": true,
+    "gesture_control": false
+  }
+}

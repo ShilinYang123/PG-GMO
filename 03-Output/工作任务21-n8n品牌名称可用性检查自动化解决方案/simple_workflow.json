@@ -1,0 +1,9 @@
+{
+  "name": "品牌名称可用性检查器",
+  "nodes": [],
+  "connections": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

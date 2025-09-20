@@ -1,0 +1,75 @@
+# 排除bak目录的具体文件，保留目录结构
+bak\**\*
+!bak\
+!bak\github_repo\
+!bak\专项备份\
+!bak\迁移备份\
+!bak\待清理资料\
+!bak\常规备份\
+
+# 排除大文件
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# 排除logs目录的具体文件，保留目录结构
+logs/**/*
+!logs/
+!logs/archive/
+!logs/其他日志/
+!logs/工作记录/
+!logs/检查报告/
+
+# 排除办公数据目录（仅全量备份时包含）
+office/
+Output/
+
+# 安全 - GitHub tokens和敏感配置
+tools/.github_config.json
+.github_token
+*.token
+.env.local
+.env.production
+secrets/
+
+# 排除临时文件和缓存
+*.tmp
+*.cache
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,58 @@
+{
+  "office": {
+    "excel": {
+      "name": "Excel MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\office\\excel_mcp_server.py",
+      "port": 8001,
+      "status": "stopped"
+    },
+    "word": {
+      "name": "Word MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\office\\word-mcp\\word_mcp_server.py",
+      "port": 8002,
+      "status": "stopped"
+    },
+    "powerpoint": {
+      "name": "PowerPoint MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\office\\powerpoint-mcp\\ppt_mcp_server.py",
+      "port": 8003,
+      "status": "stopped"
+    }
+  },
+  "design": {
+    "photoshop": {
+      "name": "Photoshop MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\graphics\\adobe-mcp-unified\\adobe_mcp\\photoshop\\server.py",
+      "port": 8004,
+      "status": "stopped"
+    }
+  },
+  "cad": {
+    "autocad": {
+      "name": "AutoCAD MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\cad\\autocad-mcp\\server_lisp.py",
+      "port": 8005,
+      "status": "stopped"
+    },
+    "general_cad": {
+      "name": "General CAD MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\cad\\cad-mcp\\src\\server.py",
+      "port": 8006,
+      "status": "stopped"
+    }
+  },
+  "graphics": {
+    "illustrator": {
+      "name": "Illustrator MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\graphics\\illustrator-mcp-windows\\src\\illustrator\\illustrator\\server.py",
+      "port": 8007,
+      "status": "stopped"
+    },
+    "modelscope_windows": {
+      "name": "ModelScope Windows MCP Server",
+      "path": "s:\\PG-GMO\\tools\\MCP\\graphics\\mcp-windows\\server.py",
+      "port": 8009,
+      "status": "stopped"
+    }
+  }
+}

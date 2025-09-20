@@ -1,0 +1,242 @@
+{
+  "name": "MVP市场调查工作流",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "url": "https://api.example.com/market-data",
+        "options": {}
+      },
+      "id": "market-data-fetch",
+      "name": "获取市场数据",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "data-validation",
+      "name": "数据验证",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 处理市场调查数据\nconst data = $input.all();\nconst processedData = data.map(item => ({\n  产品名称: item.json.product_name,\n  市场价格: item.json.price,\n  竞争对手: item.json.competitors,\n  市场份额: item.json.market_share,\n  调查时间: new Date().toISOString()\n}));\n\nreturn processedData;"
+      },
+      "id": "data-processing",
+      "name": "数据处理",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "resource": "spreadsheet",
+        "title": "市场调查数据_{{ new Date().toISOString().split('T')[0] }}",
+        "sheetsUi": {
+          "sheetValues": [
+            {
+              "sheetName": "调查结果",
+              "headerRow": true
+            }
+          ]
+        }
+      },
+      "id": "create-spreadsheet",
+      "name": "创建调查报告",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": "={{ $node['创建调查报告'].json.spreadsheetId }}",
+        "sheetName": "调查结果",
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "产品名称",
+              "displayName": "产品名称",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "市场价格",
+              "displayName": "市场价格",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "竞争对手",
+              "displayName": "竞争对手",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "市场份额",
+              "displayName": "市场份额",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "调查时间",
+              "displayName": "调查时间",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "save-data",
+      "name": "保存数据",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "subject": "市场调查完成通知",
+        "message": "市场调查工作流已完成执行\n\n调查时间: {{ new Date().toLocaleString('zh-CN') }}\n处理数据条数: {{ $json.length }}\n\n报告已保存至Google Sheets",
+        "options": {}
+      },
+      "id": "notification",
+      "name": "发送通知",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "定时触发器",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [20, 300]
+    }
+  ],
+  "connections": {
+    "定时触发器": {
+      "main": [
+        [
+          {
+            "node": "获取市场数据",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取市场数据": {
+      "main": [
+        [
+          {
+            "node": "数据验证",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "数据验证": {
+      "main": [
+        [
+          {
+            "node": "数据处理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "数据处理": {
+      "main": [
+        [
+          {
+            "node": "创建调查报告",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "创建调查报告": {
+      "main": [
+        [
+          {
+            "node": "保存数据",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "保存数据": {
+      "main": [
+        [
+          {
+            "node": "发送通知",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-01-27T00:00:00.000Z",
+      "updatedAt": "2025-01-27T00:00:00.000Z",
+      "id": "market-research",
+      "name": "市场调查"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-27T00:00:00.000Z",
+  "versionId": "1"
+}

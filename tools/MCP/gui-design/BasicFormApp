@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+由GUI设计器自动生成的代码
+UI文件: basic_form.ui
+生成时间: 2025-09-19T13:50:36.476096
+"""
+
+import pathlib
+import tkinter as tk
+import tkinter.ttk as ttk
+import pygubu
+
+PROJECT_PATH = pathlib.Path(__file__).parent
+PROJECT_UI = PROJECT_PATH / "basic_form.ui"
+
+class Basic_FormApp:
+    def __init__(self, master=None):
+        # 1: 创建构建器并设置资源路径
+        self.builder = builder = pygubu.Builder()
+        builder.add_resource_path(PROJECT_PATH)
+        
+        # 2: 加载UI文件
+        builder.add_from_file(PROJECT_UI)
+        
+        # 3: 创建主窗口
+        self.mainwindow = builder.get_object('mainwindow', master)
+        
+        # 4: 连接回调函数
+        builder.connect_callbacks(self)
+    
+    def run(self):
+        self.mainwindow.mainloop()
+
+if __name__ == '__main__':
+    app = Basic_FormApp()
+    app.run()

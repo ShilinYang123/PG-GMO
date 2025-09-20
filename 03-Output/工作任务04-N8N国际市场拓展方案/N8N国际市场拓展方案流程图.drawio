@@ -1,0 +1,153 @@
+<mxfile host="app.diagrams.net" modified="2025-01-27T00:00:00.000Z" agent="5.0" etag="" version="" type="device">
+  <diagram name="N8N国际市场拓展方案" id="N8N-flowchart">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="N8N国际市场拓展方案架构流程图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="527" y="40" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- N8N核心平台 -->
+        <mxCell id="n8n-core" value="N8N&lt;br&gt;自动化平台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B35;strokeColor=#333333;fontColor=#FFFFFF;fontSize=32;fontStyle=1;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="737" y="450" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 市场情报收集工作流 -->
+        <mxCell id="market-intel" value="市场情报&lt;br&gt;收集工作流" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#2196F3;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 跨境电商平台管理 -->
+        <mxCell id="ecommerce" value="跨境电商&lt;br&gt;平台管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 海外客户关系管理 -->
+        <mxCell id="crm" value="海外客户&lt;br&gt;关系管理(CRM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 多渠道营销自动化 -->
+        <mxCell id="marketing" value="多渠道&lt;br&gt;营销自动化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="600" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 询盘处理自动化 -->
+        <mxCell id="inquiry" value="询盘处理&lt;br&gt;自动化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#2196F3;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="757" y="700" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 外部系统 -->
+        <mxCell id="amazon-api" value="Amazon&lt;br&gt;API" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontColor=#333333;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="350" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ebay-api" value="eBay&lt;br&gt;API" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontColor=#333333;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="450" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="crm-system" value="CRM&lt;br&gt;系统" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontColor=#333333;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="324" y="450" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="email-system" value="邮件&lt;br&gt;系统" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontColor=#333333;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="800" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="analytics" value="数据&lt;br&gt;分析" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontColor=#333333;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="924" y="800" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线 -->
+        <!-- N8N到各工作流模块 -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="market-intel">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="ecommerce">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="crm">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="marketing">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="inquiry">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- N8N到外部系统 -->
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="amazon-api">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="ebay-api">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="crm-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn9" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="email-system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn10" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1" source="n8n-core" target="analytics">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="827" y="400" as="sourcePoint" />
+            <mxPoint x="877" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 实施阶段标注 -->
+        <mxCell id="phase1-label" value="第一阶段 (1-2周)&lt;br&gt;基础搭建" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#2196F3;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="phase2-label" value="第二阶段 (3-4周)&lt;br&gt;系统集成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="767" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="phase3-label" value="第三阶段 (5-6周)&lt;br&gt;优化完善" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;fontColor=#333333;fontSize=24;fontStyle=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

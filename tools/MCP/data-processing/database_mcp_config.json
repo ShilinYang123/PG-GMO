@@ -1,0 +1,200 @@
+{
+  "name": "数据库MCP服务器集合",
+  "description": "支持多种数据库的MCP服务器，包括SQLite、PostgreSQL、MySQL、SQL Server等",
+  "version": "1.0.0",
+  "type": "database_access",
+  "category": "数据处理",
+  "servers": {
+    "sqlite_mcp": {
+      "name": "SQLite MCP服务器",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+      "description": "轻量级SQLite数据库访问服务器",
+      "features": [
+        "SQLite数据库连接",
+        "SQL查询执行",
+        "表结构查看",
+        "数据插入更新",
+        "事务支持",
+        "索引管理"
+      ],
+      "installation": {
+        "method": "npm",
+        "command": "npx -y @modelcontextprotocol/server-sqlite /path/to/database.db",
+        "requirements": ["Node.js", "SQLite3"]
+      },
+      "configuration": {
+        "database_path": "/path/to/your/database.db",
+        "read_only": false,
+        "timeout": 30000,
+        "max_connections": 10
+      }
+    },
+    "postgres_mcp": {
+      "name": "PostgreSQL MCP服务器",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "description": "企业级PostgreSQL数据库访问服务器",
+      "features": [
+        "PostgreSQL连接",
+        "复杂SQL查询",
+        "存储过程调用",
+        "JSON数据处理",
+        "全文搜索",
+        "数组操作",
+        "地理数据支持"
+      ],
+      "installation": {
+        "method": "npm",
+        "command": "npx -y @modelcontextprotocol/server-postgres postgresql://user:password@localhost/dbname",
+        "requirements": ["Node.js", "PostgreSQL客户端"]
+      },
+      "configuration": {
+        "connection_string": "postgresql://user:password@localhost:5432/dbname",
+        "ssl_mode": "prefer",
+        "pool_size": 20,
+        "query_timeout": 60000
+      }
+    },
+    "mysql_mcp": {
+      "name": "MySQL MCP服务器",
+      "repository": "https://github.com/designcomputer/mysql_mcp_server",
+      "description": "MySQL数据库访问和管理服务器",
+      "features": [
+        "MySQL数据库连接",
+        "表操作管理",
+        "数据查询分析",
+        "性能监控",
+        "备份恢复",
+        "用户权限管理"
+      ],
+      "installation": {
+        "method": "git",
+        "steps": [
+          "git clone https://github.com/designcomputer/mysql_mcp_server.git",
+          "cd mysql_mcp_server",
+          "pip install -r requirements.txt",
+          "python server.py"
+        ],
+        "requirements": ["Python 3.8+", "MySQL客户端库"]
+      },
+      "configuration": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "your_username",
+        "password": "your_password",
+        "database": "your_database",
+        "charset": "utf8mb4"
+      }
+    },
+    "sqlserver_mcp": {
+      "name": "SQL Server MCP服务器",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/mssql",
+      "description": "Microsoft SQL Server数据库访问服务器",
+      "features": [
+        "SQL Server连接",
+        "T-SQL查询支持",
+        "存储过程执行",
+        "批量操作",
+        "XML数据处理",
+        "CLR集成"
+      ],
+      "installation": {
+        "method": "npm",
+        "command": "npx -y @modelcontextprotocol/server-mssql",
+        "requirements": ["Node.js", "SQL Server驱动"]
+      },
+      "configuration": {
+        "server": "localhost",
+        "database": "your_database",
+        "authentication": "sql",
+        "user": "sa",
+        "password": "your_password",
+        "encrypt": true
+      }
+    }
+  },
+  "common_features": [
+    "数据库连接管理",
+    "SQL查询执行",
+    "表结构检查",
+    "数据导入导出",
+    "查询结果格式化",
+    "错误处理和日志",
+    "连接池管理",
+    "安全认证"
+  ],
+  "claude_desktop_config": {
+    "mcpServers": {
+      "sqlite": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sqlite",
+          "/path/to/your/database.db"
+        ]
+      },
+      "postgres": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-postgres",
+          "postgresql://user:password@localhost/dbname"
+        ]
+      }
+    }
+  },
+  "environment_variables": {
+    "DB_CONNECTION_STRING": "数据库连接字符串",
+    "DB_MAX_CONNECTIONS": "最大连接数",
+    "DB_TIMEOUT": "查询超时时间",
+    "DB_SSL_MODE": "SSL连接模式",
+    "DB_LOG_LEVEL": "日志级别"
+  },
+  "use_cases": [
+    {
+      "name": "数据分析",
+      "description": "执行复杂查询进行数据分析",
+      "example": "分析销售数据趋势和客户行为"
+    },
+    {
+      "name": "报表生成",
+      "description": "从数据库生成各类业务报表",
+      "example": "生成月度财务报表和KPI仪表板"
+    },
+    {
+      "name": "数据迁移",
+      "description": "在不同数据库间迁移数据",
+      "example": "从MySQL迁移到PostgreSQL"
+    },
+    {
+      "name": "数据清洗",
+      "description": "识别和清理数据质量问题",
+      "example": "检测重复记录和数据不一致性"
+    }
+  ],
+  "security_considerations": {
+    "authentication": "强制用户认证",
+    "authorization": "基于角色的访问控制",
+    "encryption": "传输和存储加密",
+    "sql_injection_prevention": "参数化查询防护",
+    "audit_logging": "操作审计日志",
+    "connection_limits": "连接数限制"
+  },
+  "performance_optimization": {
+    "connection_pooling": "连接池管理",
+    "query_caching": "查询结果缓存",
+    "batch_operations": "批量操作支持",
+    "index_recommendations": "索引优化建议",
+    "query_profiling": "查询性能分析"
+  },
+  "monitoring_and_logging": {
+    "query_logging": "SQL查询日志",
+    "performance_metrics": "性能指标监控",
+    "error_tracking": "错误跟踪和报告",
+    "connection_monitoring": "连接状态监控",
+    "resource_usage": "资源使用统计"
+  },
+  "status": "待安装",
+  "installation_date": null,
+  "last_updated": "2025-08-24",
+  "documentation": "https://modelcontextprotocol.io/servers/"
+}

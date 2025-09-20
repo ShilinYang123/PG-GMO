@@ -1,0 +1,452 @@
+{
+  "modules": {
+    "后端API模块": {
+      "用户认证模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "auth.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "设备管理模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "equipment.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "质量管理模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "quality.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "物料管理模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "materials.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "订单管理模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "orders.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "生产计划模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "production_plans.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "进度跟踪模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "progress.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "用户管理模块": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "users.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "催办通知API": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "reminder_notifications.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      }
+    },
+    "前端界面模块": {
+      "仪表板页面": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "Dashboard/index.tsx"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "订单管理页面": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "OrderManagement/index.tsx"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "生产计划页面": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "ProductionPlan/index.tsx"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "物料管理页面": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "MaterialManagement/index.tsx"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "进度跟踪页面": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "ProgressTracking/index.tsx"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "图表组件库": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "components/Charts/"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "移动端适配": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "App.css",
+          "styles/"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "通知组件": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "components/Notifications/"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      }
+    },
+    "数据模型层": {
+      "订单模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "order.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "生产计划模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "production_plan.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "物料模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "material.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "进度记录模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "progress.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "用户模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "user.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "质量记录模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "quality.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "设备模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "equipment.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "催办模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "reminder.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "通知模型": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "notification.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      }
+    },
+    "系统集成模块": {
+      "催办通知服务": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/reminder_notification_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "多渠道通知服务": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/multi_channel_notification_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "催办调度器": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/reminder_scheduler.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "催办服务": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/reminder_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "通知服务": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/notification_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "微信集成": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/wechat_service.py",
+          "services/wechat_auth_service.py",
+          "services/wechat_group_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "邮件系统": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/email_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "短信通知": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/sms_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "文件导入导出": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "api/import_export.py",
+          "services/file_service.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      },
+      "数据备份恢复": {
+        "status": "待开发",
+        "progress": 0,
+        "files": [
+          "services/backup_service.py",
+          "services/backup_tasks.py",
+          "schemas/backup.py"
+        ],
+        "last_modified": null,
+        "lines": 0,
+        "functions": 0,
+        "classes": 0,
+        "file_count": 0
+      }
+    }
+  },
+  "last_update": "2025-09-20T09:54:13.739211",
+  "version": "1.0"
+}

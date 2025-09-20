@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "fay-digital-human": {
+      "command": "python",
+      "args": [
+        "S:\\PG-GMO\\project\\MCP\\digital-human\\installed\\Fay\\main.py"
+      ],
+      "env": {
+        "PYTHONPATH": "S:\\PG-GMO\\project\\MCP\\digital-human\\installed\\Fay"
+      }
+    },
+    "livetalking": {
+      "command": "python",
+      "args": [
+        "S:\\PG-GMO\\project\\MCP\\digital-human\\installed\\LiveTalking\\start_livetalking.py"
+      ],
+      "env": {
+        "PYTHONPATH": "S:\\PG-GMO\\project\\MCP\\digital-human\\installed\\LiveTalking"
+      }
+    }
+  }
+}

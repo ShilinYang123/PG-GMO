@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "ppt": {
+      "command": "C:\\Users\\YDS-workroom\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "args": [
+        "S:\\PG-GMO\\project\\MCP\\office\\powerpoint-mcp\\ppt_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "S:\\PG-GMO\\project\\MCP\\office\\powerpoint-mcp",
+        "PPT_TEMPLATE_PATH": "S:\\PG-GMO\\project\\MCP\\office\\powerpoint-mcp\\templates"
+      }
+    }
+  }
+}

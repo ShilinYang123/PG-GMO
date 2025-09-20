@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.2">
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="height">400</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">demo_project</property>
+    <property name="width">600</property>
+    <child>
+      <object class="ttk.Frame" id="main_frame">
+        <property name="height">200</property>
+        <property name="padding">10</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

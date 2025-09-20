@@ -1,0 +1,1 @@
+console.log('PG-GMO项目客户端已启动');

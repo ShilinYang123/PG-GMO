@@ -1,0 +1,156 @@
+{
+  "name": "Markdownify文档转换服务器",
+  "description": "将几乎任何文件或网页内容转换为Markdown格式的MCP服务器",
+  "version": "1.0.0",
+  "type": "document_processing",
+  "repository": "https://github.com/zcaceres/markdownify-mcp",
+  "category": "数据处理",
+  "features": [
+    "网页内容转Markdown",
+    "HTML文件转换",
+    "PDF文档处理",
+    "Word文档转换",
+    "文本格式标准化",
+    "批量文件处理",
+    "自定义转换规则",
+    "保留文档结构"
+  ],
+  "installation_steps": [
+    "克隆仓库: git clone https://github.com/zcaceres/markdownify-mcp.git",
+    "进入目录: cd markdownify-mcp",
+    "安装依赖: npm install 或 pip install -r requirements.txt",
+    "配置转换参数",
+    "启动MCP服务器",
+    "配置Claude Desktop连接"
+  ],
+  "api_endpoints": {
+    "convert_url": "转换网页URL为Markdown",
+    "convert_file": "转换本地文件为Markdown",
+    "convert_html": "转换HTML内容为Markdown",
+    "batch_convert": "批量转换多个文件",
+    "get_supported_formats": "获取支持的文件格式列表"
+  },
+  "supported_formats": {
+    "input": [
+      "HTML",
+      "PDF",
+      "DOCX",
+      "RTF",
+      "TXT",
+      "网页URL",
+      "XML",
+      "EPUB"
+    ],
+    "output": [
+      "Markdown (.md)",
+      "GitHub Flavored Markdown",
+      "CommonMark"
+    ]
+  },
+  "configuration": {
+    "output_format": "github",
+    "preserve_links": true,
+    "preserve_images": true,
+    "strip_tags": ["script", "style", "nav"],
+    "heading_style": "atx",
+    "bullet_style": "-",
+    "code_fence": "```"
+  },
+  "environment_variables": {
+    "MARKDOWNIFY_OUTPUT_DIR": "输出目录路径",
+    "MARKDOWNIFY_TEMP_DIR": "临时文件目录",
+    "MARKDOWNIFY_MAX_FILE_SIZE": "最大文件大小限制",
+    "MARKDOWNIFY_TIMEOUT": "转换超时时间"
+  },
+  "claude_desktop_config": {
+    "mcpServers": {
+      "markdownify": {
+        "command": "node",
+        "args": [
+          "/absolute/path/to/markdownify-mcp/server.js"
+        ]
+      }
+    }
+  },
+  "conversion_options": {
+    "html_to_markdown": {
+      "strip_attributes": true,
+      "convert_br": "\n",
+      "heading_style": "atx",
+      "bullet_list_marker": "-",
+      "code_block_style": "fenced"
+    },
+    "pdf_to_markdown": {
+      "extract_images": true,
+      "preserve_layout": false,
+      "ocr_enabled": true,
+      "language": "auto"
+    },
+    "docx_to_markdown": {
+      "preserve_formatting": true,
+      "extract_images": true,
+      "convert_tables": true,
+      "handle_footnotes": true
+    }
+  },
+  "use_cases": [
+    {
+      "name": "网页内容提取",
+      "description": "将网页内容转换为结构化Markdown",
+      "example": "转换技术文档网站为本地Markdown文件"
+    },
+    {
+      "name": "文档标准化",
+      "description": "统一不同格式文档为Markdown",
+      "example": "将Word文档转换为Git友好的Markdown"
+    },
+    {
+      "name": "内容迁移",
+      "description": "从旧系统迁移内容到新平台",
+      "example": "将CMS内容导出为Markdown格式"
+    },
+    {
+      "name": "文档处理流水线",
+      "description": "自动化文档处理工作流",
+      "example": "批量处理PDF报告转换为可编辑格式"
+    }
+  ],
+  "quality_settings": {
+    "image_handling": {
+      "download_images": true,
+      "image_alt_text": "auto_generate",
+      "max_image_size": "5MB",
+      "supported_formats": ["jpg", "png", "gif", "svg", "webp"]
+    },
+    "text_processing": {
+      "preserve_whitespace": false,
+      "normalize_unicode": true,
+      "remove_empty_paragraphs": true,
+      "fix_encoding": true
+    },
+    "structure_preservation": {
+      "maintain_hierarchy": true,
+      "preserve_tables": true,
+      "convert_lists": true,
+      "handle_blockquotes": true
+    }
+  },
+  "performance": {
+    "max_concurrent_conversions": 5,
+    "memory_limit": "512MB",
+    "timeout_per_file": "60s",
+    "cache_enabled": true,
+    "cache_duration": "1h"
+  },
+  "error_handling": {
+    "retry_attempts": 3,
+    "fallback_encoding": "utf-8",
+    "skip_corrupted_files": true,
+    "log_level": "info"
+  },
+  "status": "待安装",
+  "installation_date": null,
+  "last_updated": "2025-08-24",
+  "documentation": "https://github.com/zcaceres/markdownify-mcp/blob/main/README.md",
+  "npm_package": "markdownify-mcp"
+}

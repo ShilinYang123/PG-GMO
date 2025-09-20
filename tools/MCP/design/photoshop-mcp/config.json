@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+      "PhotoshopAdv": {
+        "command": "C:\\Users\\YDS-workroom\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "args": [
+          "S:\\PG-GMO\\project\\MCP\\design\\photoshop-mcp\\psMCP.py"
+        ],
+        "env": {
+          "PYTHONPATH": "S:\\PG-GMO\\project\\MCP\\design\\photoshop-mcp"
+        },
+        "timeout": 60000 
+      }
+    }
+  }

@@ -1,0 +1,475 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="综合订单全流程ERP系统业务流程图-重新生成版" id="flowchart">
+    <mxGraphModel dx="868" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_business" value="业务部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFE6E6;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="250" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_042" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="lane_business" source="S32" target="E01" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S26" value="S26. 开票申请&#xa;发票开具准备&#xa;&#xa;🏢 业务部&#xa;💻 开票系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 开票资料收集&#xa;• 开票信息确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="5165" y="-10" width="130" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="S32" value="S32. 订单结案&#xa;业务流程完结&#xa;&#xa;🏢 业务部&#xa;💻 ERP系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 订单状态更新&#xa;• 客户满意度调查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="5360" y="-7" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="E01" value="E01. 流程结束&#xa;订单全流程完成&#xa;&#xa;🏢 全部门&#xa;💻 ERP系统&#xa;&#xa;📌 总结要点:&#xa;• 流程完整性确认&#xa;• 经验总结归档" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;fontStyle=1;" parent="lane_business" vertex="1">
+          <mxGeometry x="5520" y="-17" width="180" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="S02" value="S02. 业务接单评估&#xa;技术可行性分析&#xa;&#xa;🏢 业务部&#xa;💻 CRM系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 客户背景调研&#xa;• 技术难度评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="380" y="-12" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S06" value="S06. 合同签订&#xa;订单正式确认&#xa;&#xa;🏢 业务部&#xa;💻 合同管理系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 合同条款确认&#xa;• 付款方式协商" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="1100" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S07" value="S07. 订单录入&#xa;ERP系统建档&#xa;&#xa;🏢 业务部&#xa;💻 ERP系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 订单信息录入&#xa;• 客户档案建立" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="1280" y="5" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S29" value="S29. 付款催收&#xa;应收账款管理&#xa;&#xa;🏢 业务部+财务部&#xa;💻 应收系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 付款期限跟踪&#xa;• 催收策略执行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#000000;fontSize=10;" parent="lane_business" vertex="1">
+          <mxGeometry x="4520" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_engineering" value="工程部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFFFE6;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="350" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S03" value="S03. 工程技术评估&#xa;产品设计可行性&#xa;&#xa;🏢 工程部&#xa;💻 CAD系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 技术方案确认&#xa;• 设计难度评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFE6;strokeColor=#000000;fontSize=10;" parent="lane_engineering" vertex="1">
+          <mxGeometry x="560" y="-19" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S08" value="S08. 工程图纸设计&#xa;技术方案制定&#xa;&#xa;🏢 工程部&#xa;💻 CAD系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 设计进度跟踪&#xa;• 技术变更管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFE6;strokeColor=#000000;fontSize=10;" parent="lane_engineering" vertex="1">
+          <mxGeometry x="1460" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S08.1" value="S08.1 图纸会审&#xa;多部门技术确认&#xa;&#xa;🏢 工程部+业务部+PMC&#xa;💻 协作平台&#xa;&#xa;📌 业务跟单要点:&#xa;• 图纸准确性确认&#xa;• 生产可行性评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFE6;strokeColor=#000000;fontSize=10;" parent="lane_engineering" vertex="1">
+          <mxGeometry x="1640" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S08.2" value="S08.2 图纸修正优化&#xa;技术方案调整&#xa;&#xa;🏢 工程部&#xa;💻 CAD设计系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 图纸修正跟进&#xa;• 技术优化确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFE6;strokeColor=#000000;fontSize=10;" parent="lane_engineering" vertex="1">
+          <mxGeometry x="1820" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_warehouse" value="仓储部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#F0E6FF;strokeColor=#4A90E2;strokeWidth=1;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="950" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S13" value="S13. 物料入库检验&#xa;库存管理确认&#xa;&#xa;🏢 仓储部&#xa;💻 WMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 入库进度跟踪&#xa;• 质量问题处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0E6FF;strokeColor=#000000;fontSize=10;" parent="lane_warehouse" vertex="1">
+          <mxGeometry x="2900" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S18" value="S18. 物料领用&#xa;生产保障支持&#xa;&#xa;🏢 仓储部&#xa;💻 WMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 物料配送跟踪&#xa;• 生产保障确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0E6FF;strokeColor=#000000;fontSize=10;" parent="lane_warehouse" vertex="1">
+          <mxGeometry x="3800" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S24" value="S24. 出货安排&#xa;物流配送协调&#xa;&#xa;🏢 仓储部+业务部&#xa;💻 物流系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 出货计划确认&#xa;• 物流跟踪服务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0E6FF;strokeColor=#000000;fontSize=10;" parent="lane_warehouse" vertex="1">
+          <mxGeometry x="5012" y="-12.5" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_assembly" value="装配部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFE4E1;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1050" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S20" value="S20. 装配生产执行&#xa;产品组装完成&#xa;&#xa;🏢 装配部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 装配进度跟踪&#xa;• 质量实时监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E1;strokeColor=#000000;fontSize=10;" parent="lane_assembly" vertex="1">
+          <mxGeometry x="4343" y="-11" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="S19" value="S19. 装配准备工作&#xa;生产现场准备&#xa;&#xa;🏢 装配部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 装配准备确认&#xa;• 工艺参数设定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E1;strokeColor=#000000;fontSize=10;" parent="lane_assembly" vertex="1">
+          <mxGeometry x="3990" y="-20" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_customer" value="客户" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#E6F3FF;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="150" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S01" value="S01. 客户询价&#xa;需求初步了解&#xa;&#xa;🏢 客户&#xa;💻 询价系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 客户需求记录&#xa;• 初步可行性评估" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;fontStyle=1;" parent="lane_customer" vertex="1">
+          <mxGeometry x="145" y="2" width="200" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S28" value="S28. 发票寄送&#xa;客户发票接收&#xa;&#xa;🏢 财务部+客户&#xa;💻 物流系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 发票寄送跟踪&#xa;• 客户接收确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_customer" vertex="1">
+          <mxGeometry x="4160" y="2" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S30" value="S30. 客户付款&#xa;货款结算完成&#xa;&#xa;🏢 客户&#xa;💻 银行系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 付款到账监控&#xa;• 付款方式确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_customer" vertex="1">
+          <mxGeometry x="4700" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S23" value="S23. 包装入库&#xa;成品仓储管理&#xa;&#xa;🏢 仓储部&#xa;💻 WMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 包装规格确认&#xa;• 入库数量核对" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0E6FF;strokeColor=#000000;fontSize=10;" parent="lane_customer" vertex="1">
+          <mxGeometry x="4835" y="788" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S25" value="S25. 客户收货确认&#xa;交付完成验收&#xa;&#xa;🏢 客户+业务部&#xa;💻 交付系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 客户收货跟进&#xa;• 交付问题处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_customer" vertex="1">
+          <mxGeometry x="5012" y="2" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="综合订单全流程详细业务流程图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="2400" y="40" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_supplier" value="供应商" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFF0F5;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="100" y="850" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S14" value="S14. 供应商交付&#xa;物料供应保障&#xa;&#xa;🏢 供应商&#xa;💻 供应链系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 交付进度监控&#xa;• 质量标准确保" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F5;strokeColor=#000000;fontSize=10;" parent="lane_supplier" vertex="1">
+          <mxGeometry x="3089" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_010" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S08.2" target="S08.3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_hardware" value="五金" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFE4E1;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1150" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S20.1" value="S20.1 五金生产&#xa;冲压成型加工&#xa;&#xa;🏢 五金&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 五金件质量控制&#xa;• 生产进度跟踪" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E1;strokeColor=#000000;fontSize=10;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="lane_hardware" vertex="1">
+          <mxGeometry x="3992" y="10" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_finance" value="财务部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#E0FFFF;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="450" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S04" value="S04. 初步成本核算&#xa;价格制定分析&#xa;&#xa;🏢 财务部&#xa;💻 报价系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 成本准确核算&#xa;• 利润空间评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0FFFF;strokeColor=#000000;fontSize=10;" parent="lane_finance" vertex="1">
+          <mxGeometry x="740" y="-23" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="S27" value="S27. 发票开具&#xa;税务凭证生成&#xa;&#xa;🏢 财务部&#xa;💻 财务系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 发票准确性确认&#xa;• 开票进度跟踪" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0FFFF;strokeColor=#000000;fontSize=10;" parent="lane_finance" vertex="1">
+          <mxGeometry x="5165" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="D04" value="D04. 付款状态决策&#xa;收款风险评估&#xa;&#xa;🏢 财务部+业务部&#xa;💻 风险管理系统&#xa;&#xa;📌 决策要点:&#xa;• 客户信用评估&#xa;• 账期风险分析" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E0FFFF;strokeColor=#000000;fontSize=10;" parent="lane_finance" vertex="1">
+          <mxGeometry x="4209" y="-133" width="271" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="S31" value="S31. 收款确认&#xa;财务入账处理&#xa;&#xa;🏢 财务部&#xa;💻 财务系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 收款金额核对&#xa;• 账务处理确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0FFFF;strokeColor=#000000;fontSize=10;" parent="lane_finance" vertex="1">
+          <mxGeometry x="4883" y="-30" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_management" value="管理层" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFB6C1;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="550" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D01" value="D01. 管理层决策&#xa;接单风险评估&#xa;&#xa;🏢 管理层&#xa;💻 决策支持系统&#xa;&#xa;📌 决策要点:&#xa;• 价格接受度&#xa;• 技术要求确认" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#000000;fontSize=10;" parent="lane_management" vertex="1">
+          <mxGeometry x="890" y="-32" width="229" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_pmc" value="PMC部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#E6F3FF;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="650" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S09" value="S09. 生产准备启动&#xa;样板制作统筹&#xa;&#xa;🏢 PMC部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 生产资源评估&#xa;• 样板制作跟进&#xa;• 工艺流程确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_pmc" vertex="1">
+          <mxGeometry x="2180" y="-40" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S10" value="S10. BOM清单制定&#xa;物料需求分析&#xa;&#xa;🏢 PMC部&#xa;💻 ERP系统&#xa;&#xa;📌 业务跟单要点:&#xa;• BOM准确性确认&#xa;• 物料需求计算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;" parent="lane_pmc" vertex="1">
+          <mxGeometry x="2360" y="-40" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S11" value="S11. 生产计划制定&#xa;物料采购协调&#xa;&#xa;🏢 PMC部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 生产计划确认&#xa;• 采购需求协调" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;" parent="lane_pmc" vertex="1">
+          <mxGeometry x="2540" y="-40" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S15" value="S15. 生产任务调度&#xa;资源配置管理&#xa;&#xa;🏢 PMC部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 生产排程确认&#xa;• 资源调配优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_pmc" vertex="1">
+          <mxGeometry x="3260" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="S17" value="S17. 生产任务下达&#xa;车间作业安排&#xa;&#xa;🏢 PMC部&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 生产任务跟踪&#xa;• 进度实时监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="lane_pmc" vertex="1">
+          <mxGeometry x="3670" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_procurement" value="采购部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#F0F8FF;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="750" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S12" value="S12. 采购订单下达&#xa;供应商合作确认&#xa;&#xa;🏢 采购部&#xa;💻 采购系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 采购进度跟踪&#xa;• 交期协调管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;" parent="lane_procurement" vertex="1">
+          <mxGeometry x="2720" y="15" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_injection" value="注塑" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFE4E1;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1250" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S20.2" value="S20.2 注塑生产&#xa;塑料件成型&#xa;&#xa;🏢 注塑&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 注塑件质量控制&#xa;• 模具维护跟踪" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E1;strokeColor=#000000;fontSize=10;" parent="lane_injection" vertex="1">
+          <mxGeometry x="4110" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="S20.3" value="S20.3 丝印生产&#xa;表面处理加工&#xa;&#xa;🏢 丝印&#xa;💻 MES系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 丝印质量控制&#xa;• 外观效果确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E1;strokeColor=#000000;fontSize=10;" parent="lane_injection" vertex="1">
+          <mxGeometry x="4234" y="67" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_silkscreen" value="丝印" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFE4E1;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1350" width="5700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_quality" value="品质部" style="swimlane;html=1;startSize=20;horizontal=0;fillColor=#FFF0E6;strokeColor=#4A90E2;strokeWidth=2;strokeDashArray=15,5;fontSize=14;fontStyle=1;opacity=60;swimlaneFillColor=none;shadow=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1450" width="5700" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="S16" value="S16. 首件检验&#xa;生产质量确认&#xa;&#xa;🏢 品质部&#xa;💻 QMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 首件质量确认&#xa;• 生产标准建立" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#000000;fontSize=10;" parent="lane_quality" vertex="1">
+          <mxGeometry x="3440" y="-66" width="130" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="S21" value="S21. 过程质量检验&#xa;生产质量监控&#xa;&#xa;🏢 品质部&#xa;💻 QMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 过程质量跟踪&#xa;• 不良品处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#000000;fontSize=10;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4460" y="-62" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="S22" value="S22. 成品检验&#xa;出货质量确认&#xa;&#xa;🏢 品质部&#xa;💻 QMS系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 成品质量确认&#xa;• 检验报告跟进" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#000000;fontSize=10;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4700" y="-62" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Q01_IQC" value="IQC来料检验\n原材料质量检查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="2905" y="99" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q02_IPQC1" value="IPQC五金检验\n五金件制程检验" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4007" y="15" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q03_IPQC2" value="IPQC注塑检验\n注塑件制程检验" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4125" y="15" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q04_IPQC3" value="IPQC丝印检验\n丝印质量检验" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4249" y="15" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q05_IPQC4" value="IPQC装配检验\n装配质量检验" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4358" y="15" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q06_LAB" value="实验室检测\n材料性能测试" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="3446" y="99" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q07_QA" value="QA质量审核\n&lt;div&gt;质量体系保证&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4700" y="98" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q08_QE" value="QE质量改善\n质量工程分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0E6;strokeColor=#FF6600;strokeWidth=2;fontSize=9;" parent="lane_quality" vertex="1">
+          <mxGeometry x="4450" y="98" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="stats_info" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;📊 流程统计信息&lt;br&gt;&lt;br&gt;📈 总体数据:&lt;br&gt;• 业务步骤: 35个&lt;br&gt;• 决策节点: 2个&lt;br&gt;• 连接线: 42条&lt;br&gt;• 泳道数量: 14个&lt;br&gt;&lt;br&gt;🏢 部门分布:&lt;br&gt;• 客户: 4个步骤&lt;br&gt;• 业务部: 8个步骤&lt;br&gt;• 工程部: 6个步骤&lt;br&gt;• PMC部: 6个步骤&lt;br&gt;• 生产线: 7个步骤&lt;br&gt;• 品质部: 3个步骤&lt;br&gt;• 其他部门: 6个步骤&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;fontSize=9;fontStyle=1;align=left;verticalAlign=top;" parent="lane_quality" vertex="1">
+          <mxGeometry x="220" y="-200" width="460" height="313" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_Q06" value="材料测试" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6600;strokeWidth=2;fontSize=9;fontColor=#FF6600;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane_quality" source="S16" target="Q06_LAB" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3505" y="99" />
+            </Array>
+            <mxPoint as="offset" />
+            <mxPoint x="3498" y="51.99999999999977" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S08.3" target="S09" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-26" value="确认" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1sOdI2woH85RpwprTfig-25" vertex="1" connectable="0">
+          <mxGeometry x="0.0064" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S08.3" value="S08.3 客户图纸确认&#xa;技术方案最终确定&#xa;&#xa;🏢 客户+业务部&#xa;💻 图纸管理系统&#xa;&#xa;📌 业务跟单要点:&#xa;• 客户确认跟进&#xa;• 变更需求处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#000000;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="151" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_001" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S01" target="S02" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_002" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S02" target="S03" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_003" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S03" target="S04" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_004" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S04" target="D01" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_006" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S06" target="S07" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_007" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S07" target="S08" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_008" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S08" target="S08.1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_009" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S08.1" target="S08.2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_012" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S09" target="S10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_013" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S10" target="S11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_014" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S11" target="S12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_015" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S12" target="S13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_016" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S13" target="S14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_017" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S14" target="S15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_018" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S15" target="S16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_019" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S16" target="S17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3720" y="1481" />
+              <mxPoint x="3720" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_020" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="S17" target="S18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_021" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S18" target="S19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_028" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S20" target="S21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_029" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S21" target="S22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_030" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" target="S23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4849" y="1000" />
+            </Array>
+            <mxPoint x="4849.000000000001" y="1420" as="sourcePoint" />
+            <mxPoint x="4919" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_035" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5299" y="400" />
+              <mxPoint x="4230" y="400" />
+              <mxPoint x="4230" y="211" />
+            </Array>
+            <mxPoint x="5625" y="465" as="sourcePoint" />
+            <mxPoint x="4260" y="211" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_036" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S28" target="D04" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_037" value="正常付款" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4ECDC4;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="D04" target="S30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4445" y="540" />
+              <mxPoint x="4865" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_038" value="需催收" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4ECDC4;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="D04" target="S29" edge="1">
+          <mxGeometry x="-0.0001" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4599" y="330" />
+              <mxPoint x="4600" y="330" />
+              <mxPoint x="4600" y="278" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_039" value="催收完成" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4ECDC4;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.009;entryY=0.405;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="S29" target="S30" edge="1">
+          <mxGeometry x="-0.0877" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_040" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S30" target="S31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4950" y="200" />
+              <mxPoint x="4950" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_Q07" value="质量审核" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6600;strokeWidth=2;fontSize=9;fontColor=#FF6600;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S22" target="Q07_QA" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4850" y="1540" />
+              <mxPoint x="4850" y="1540" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_Q08" value="质量改善" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6600;strokeWidth=2;fontSize=9;fontColor=#FF6600;" parent="1" source="S21" target="Q08_QE" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4610" y="1560" />
+              <mxPoint x="4610" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S20.1" target="Q02_IPQC1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="S20.2" target="Q03_IPQC2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S20.3" target="Q04_IPQC3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S18" target="S20.1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4061" y="1028" />
+              <mxPoint x="4061" y="1220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S20" target="Q05_IPQC4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4507.896551724138" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S20.1" target="S20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S26" target="S27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="5250" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S25" target="S26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="D01" target="S01" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="599" />
+              <mxPoint x="200" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-22" value="拒绝" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1sOdI2woH85RpwprTfig-21" vertex="1" connectable="0">
+          <mxGeometry x="-0.1237" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="S06" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="600" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1265" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-24" value="接受" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1sOdI2woH85RpwprTfig-23" vertex="1" connectable="0">
+          <mxGeometry x="0.1316" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_031" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;" parent="1" source="S23" target="S24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="S27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5330" y="580" />
+              <mxPoint x="4230" y="580" />
+              <mxPoint x="4230" y="211" />
+            </Array>
+            <mxPoint x="5625" y="465" as="sourcePoint" />
+            <mxPoint x="4260" y="211" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="S24" target="S25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S18" target="S20.2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4060" y="1028" />
+              <mxPoint x="4060" y="1310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S18" target="S20.3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4060" y="1028" />
+              <mxPoint x="4060" y="1377" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S20.3" target="S20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="S20.2" target="S20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4350" y="1310" />
+              <mxPoint x="4350" y="1099" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sOdI2woH85RpwprTfig-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="S13" target="Q01_IQC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Qxo86_Pw1FVfr65ieoC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="S31" target="S32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5048" y="570" />
+              <mxPoint x="5525" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

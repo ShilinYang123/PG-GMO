@@ -1,0 +1,44 @@
+{
+  "name": "LiveTalking实时交互数字人",
+  "description": "基于深度学习的实时交互数字人系统，支持语音驱动的面部动画生成",
+  "version": "latest",
+  "type": "mcp_server",
+  "repository": "https://github.com/ai-forever/LiveTalking",
+  "category": "digital_human",
+  "features": [
+    "实时语音驱动面部动画",
+    "高质量唇形同步",
+    "支持多种输入格式",
+    "GPU加速推理",
+    "可定制化数字人模型",
+    "支持实时交互",
+    "开源免费使用"
+  ],
+  "requirements": {
+    "python": "3.8+",
+    "os": ["Windows", "Linux"],
+    "gpu": "NVIDIA GPU推荐",
+    "dependencies": "requirements.txt"
+  },
+  "installation": {
+    "steps": [
+      "git clone https://github.com/ai-forever/LiveTalking.git",
+      "cd LiveTalking",
+      "pip install -r requirements.txt",
+      "下载预训练模型",
+      "python demo.py"
+    ]
+  },
+  "apis": {
+    "generate_talking_face": "生成说话面部动画",
+    "real_time_inference": "实时推理接口",
+    "model_management": "模型管理接口"
+  },
+  "supported_formats": {
+    "input": ["WAV", "MP3", "实时音频流"],
+    "output": ["MP4", "实时视频流"]
+  },
+  "status": "ready_to_install",
+  "install_date": "2025-01-25",
+  "documentation": "README.md"
+}

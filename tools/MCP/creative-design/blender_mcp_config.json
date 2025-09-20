@@ -1,0 +1,72 @@
+{
+  "name": "BlenderMCP",
+  "description": "通过MCP协议连接Blender实现AI控制，支持3D建模、动画、渲染自动化",
+  "version": "1.0.0",
+  "type": "3d_modeling",
+  "repository": "https://github.com/blender-mcp/blender-mcp",
+  "category": "3D创意设计",
+  "features": [
+    "3D模型创建和编辑",
+    "材质和纹理管理",
+    "动画制作",
+    "渲染控制",
+    "场景管理",
+    "脚本自动化",
+    "插件集成",
+    "批量处理"
+  ],
+  "installation_steps": [
+    "确保已安装Blender 3.0+",
+    "克隆BlenderMCP仓库",
+    "安装Python依赖",
+    "配置Blender Python路径",
+    "安装Blender插件",
+    "启动MCP服务器",
+    "配置Claude Desktop连接"
+  ],
+  "api_endpoints": {
+    "create_object": "/api/blender/objects/create",
+    "modify_object": "/api/blender/objects/{object_id}/modify",
+    "render_scene": "/api/blender/render",
+    "export_model": "/api/blender/export",
+    "import_model": "/api/blender/import",
+    "animation_control": "/api/blender/animation"
+  },
+  "supported_formats": {
+    "import": [
+      "obj",
+      "fbx",
+      "dae",
+      "ply",
+      "stl",
+      "gltf"
+    ],
+    "export": [
+      "obj",
+      "fbx",
+      "dae",
+      "ply",
+      "stl",
+      "gltf",
+      "blend"
+    ]
+  },
+  "configuration": {
+    "blender_path": "C:\\Program Files\\Blender Foundation\\Blender 4.0\\blender.exe",
+    "server_port": 8002,
+    "render_engine": "CYCLES",
+    "render_samples": 128,
+    "output_format": "PNG",
+    "resolution_x": 1920,
+    "resolution_y": 1080
+  },
+  "requirements": {
+    "blender_version": ">=3.0",
+    "python_version": ">=3.9",
+    "system_ram": ">=8GB",
+    "gpu_support": "CUDA或OpenCL（可选）"
+  },
+  "status": "安装失败",
+  "install_date": null,
+  "documentation": "https://docs.blender.org/api/current/"
+}

@@ -1,0 +1,73 @@
+{
+    "server_info": {
+        "name": "Local GUI Designer MCP Server",
+        "version": "1.0.0",
+        "description": "基于Pygubu的可视化GUI设计和布局优化工具",
+        "author": "PG-GMO Team",
+        "created_at": "2025-09-19T13:36:00.000000"
+    },
+    "pygubu_config": {
+        "designer_executable": "pygubu-designer",
+        "default_theme": "default",
+        "auto_save": true,
+        "backup_enabled": true
+    },
+    "project_settings": {
+        "default_window_size": {
+            "width": 800,
+            "height": 600
+        },
+        "default_padding": 10,
+        "grid_snap": true,
+        "show_grid": true
+    },
+    "code_generation": {
+        "auto_format": true,
+        "include_comments": true,
+        "encoding": "utf-8",
+        "template_style": "class_based"
+    },
+    "layout_optimization": {
+        "auto_resize": true,
+        "responsive_design": true,
+        "minimize_nesting": true,
+        "optimize_spacing": true
+    },
+    "directories": {
+        "projects": "gui-projects",
+        "templates": "gui-templates",
+        "exports": "gui-exports",
+        "backups": "gui-backups"
+    },
+    "supported_widgets": [
+        "tk.Frame",
+        "ttk.Frame",
+        "tk.Label",
+        "ttk.Label",
+        "tk.Button",
+        "ttk.Button",
+        "tk.Entry",
+        "ttk.Entry",
+        "tk.Text",
+        "tk.Listbox",
+        "ttk.Treeview",
+        "ttk.Combobox",
+        "tk.Canvas",
+        "ttk.Notebook",
+        "ttk.Panedwindow",
+        "tk.Menu",
+        "tk.Menubutton"
+    ],
+    "layout_managers": [
+        "pack",
+        "grid",
+        "place"
+    ],
+    "quick_actions": {
+        "create_form_layout": "创建表单布局",
+        "create_dialog_layout": "创建对话框布局",
+        "create_main_window": "创建主窗口布局",
+        "create_toolbar": "创建工具栏",
+        "create_statusbar": "创建状态栏"
+    }
+}

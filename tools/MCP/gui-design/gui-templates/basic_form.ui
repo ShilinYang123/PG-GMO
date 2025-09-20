@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="main_window">
+    <property name="height">400</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">基础表单</property>
+    <property name="width">500</property>
+    <child>
+      <object class="ttk.Frame" id="main_frame">
+        <property name="padding">20</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="title_label">
+            <property name="font">TkDefaultFont 14 bold</property>
+            <property name="text" translatable="yes">表单标题</property>
+            <layout manager="pack">
+              <property name="pady">0 20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="form_frame">
+            <layout manager="pack">
+              <property name="fill">x</property>
+              <property name="pady">0 20</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="name_label">
+                <property name="text" translatable="yes">姓名:</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="padx">0 10</property>
+                  <property name="pady">5</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Entry" id="name_entry">
+                <property name="width">30</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="email_label">
+                <property name="text" translatable="yes">邮箱:</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="padx">0 10</property>
+                  <property name="pady">5</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Entry" id="email_entry">
+                <property name="width">30</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="message_label">
+                <property name="text" translatable="yes">留言:</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="padx">0 10</property>
+                  <property name="pady">5</property>
+                  <property name="row">2</property>
+                  <property name="sticky">nw</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Text" id="message_text">
+                <property name="height">5</property>
+                <property name="width">30</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="row">2</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="button_frame">
+            <layout manager="pack">
+              <property name="fill">x</property>
+            </layout>
+            <child>
+              <object class="ttk.Button" id="submit_button">
+                <property name="text" translatable="yes">提交</property>
+                <layout manager="pack">
+                  <property name="padx">5</property>
+                  <property name="side">right</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="cancel_button">
+                <property name="text" translatable="yes">取消</property>
+                <layout manager="pack">
+                  <property name="padx">5</property>
+                  <property name="side">right</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

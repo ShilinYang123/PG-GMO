@@ -1,0 +1,188 @@
+{
+  "name": "询盘处理自动化工作流",
+  "version": 1,
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 5,
+              "unit": "minutes"
+            }
+          ]
+        },
+        "criteria": {
+          "item": [
+            {
+              "field": "from",
+              "operator": "contains",
+              "value": "询盘"
+            }
+          ]
+        }
+      },
+      "id": "1",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendToSheet",
+        "sheetId": "1BkL6X5j0X8tQ1J5X1J5X1J5X1J5X1J5X1J5X1J5X1J5",
+        "sheetName": "询盘记录",
+        "columns": {
+          "item": [
+            {
+              "column": "发件人",
+              "value": "={{ $json.from }}"
+            },
+            {
+              "column": "主题",
+              "value": "={{ $json.subject }}"
+            },
+            {
+              "column": "内容",
+              "value": "={{ $json.body }}"
+            },
+            {
+              "column": "日期",
+              "value": "={{ new Date() }}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-3.5-turbo",
+        "messages": {
+          "item": [
+            {
+              "role": "system",
+              "content": "你是一个专业的外贸业务员，请分析这封询盘邮件，提取关键信息：客户公司名称、联系人、产品需求、数量、目标价格、交货期要求。"
+            },
+            {
+              "role": "user",
+              "content": "={{ $json.body }}"
+            }
+          ]
+        }
+      },
+      "id": "3",
+      "name": "OpenAI",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": "{{$parameter[\"sheetId\"]}}",
+        "sheetName": "询盘分析结果",
+        "key": "发件人",
+        "value": "={{ $json.from }}",
+        "columns": {
+          "item": [
+            {
+              "column": "分析结果",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        }
+      },
+      "id": "4",
+      "name": "更新分析结果",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "=?UTF-8?Q?{{ $json.subject }}?=",
+        "body": "=?UTF-8?Q?感谢您的询盘，我们已经收到并正在处理中。我们的业务员会在24小时内与您联系。?=",
+        "toList": {
+          "item": [
+            {
+              "value": "={{ $json.from }}"
+            }
+          ]
+        }
+      },
+      "id": "5",
+      "name": "自动回复",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "更新分析结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "更新分析结果": {
+      "main": [
+        [
+          {
+            "node": "自动回复",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

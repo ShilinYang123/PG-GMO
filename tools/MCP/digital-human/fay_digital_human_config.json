@@ -1,0 +1,54 @@
+{
+  "name": "Fay数字人框架",
+  "description": "完整的开源数字人框架，支持2.5D、3D数字人，提供语音交互、文字交互、数字人驱动等接口",
+  "version": "latest",
+  "type": "mcp_server",
+  "repository": "https://github.com/xszyou/Fay",
+  "category": "digital_human",
+  "features": [
+    "完全开源，商用免责",
+    "支持全离线使用",
+    "全时流式支持",
+    "自由匹配数字人模型、大语言模型、ASR、TTS模型",
+    "支持数字人自动播报模式",
+    "支持任意终端使用",
+    "支持多用户多路并发",
+    "提供完整API接口",
+    "支持语音指令灵活配置",
+    "支持自定义知识库",
+    "支持唤醒及打断对话",
+    "支持MCP协议"
+  ],
+  "requirements": {
+    "python": "3.12",
+    "os": ["Windows", "macOS", "Ubuntu"],
+    "dependencies": "requirements.txt"
+  },
+  "installation": {
+    "steps": [
+      "git clone https://github.com/xszyou/Fay.git",
+      "cd Fay",
+      "pip install -r requirements.txt",
+      "修改 ./system.conf 配置文件",
+      "python main.py"
+    ]
+  },
+  "apis": {
+    "text_interaction": "文字交互接口",
+    "voice_interaction": "语音交互接口",
+    "digital_human_drive": "数字人驱动接口",
+    "management_control": "管理控制接口",
+    "auto_broadcast": "自动播报接口",
+    "intent_interface": "意图接口"
+  },
+  "supported_models": {
+    "digital_human": ["UE5", "Unity", "MetaHuman-Stream", "Duix", "AiBote"],
+    "llm": ["OpenAI兼容", "DeepSeek", "本地模型"],
+    "tts": ["多种TTS模型"],
+    "asr": ["多种ASR模型"]
+  },
+  "status": "ready_to_install",
+  "install_date": "2025-01-25",
+  "documentation": "https://qqk9ntwbcit.feishu.cn/wiki/JzMJw7AghiO8eHktMwlcxznenIg",
+  "demo": "https://www.compshare.cn/images/compshareImage-1cft3sk9gvta"
+}

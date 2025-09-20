@@ -1,0 +1,41 @@
+{
+    "data":  [
+                 {
+                     "createdAt":  "2025-09-09T15:06:44.617Z",
+                     "updatedAt":  "2025-09-09T15:06:44.617Z",
+                     "id":  "SyQjiWmw7wvguI6a",
+                     "name":  "Market Intelligence Collection",
+                     "active":  false,
+                     "isArchived":  false,
+                     "nodes":  [
+
+                               ],
+                     "connections":  {
+
+                                     },
+                     "settings":  {
+                                      "executionOrder":  "v1"
+                                  },
+                     "staticData":  null,
+                     "meta":  null,
+                     "pinData":  {
+
+                                 },
+                     "versionId":  "c72d43ae-4464-4d08-92d9-0e74277f5f9e",
+                     "triggerCount":  0,
+                     "shared":  [
+                                    {
+                                        "createdAt":  "2025-09-09T15:06:44.624Z",
+                                        "updatedAt":  "2025-09-09T15:06:44.624Z",
+                                        "role":  "workflow:owner",
+                                        "workflowId":  "SyQjiWmw7wvguI6a",
+                                        "projectId":  "FMHpOSpiBp6Zgh63"
+                                    }
+                                ],
+                     "tags":  [
+
+                              ]
+                 }
+             ],
+    "nextCursor":  null
+}

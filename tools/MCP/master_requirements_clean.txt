@@ -1,0 +1,54 @@
+# 清理后的MCP工具主依赖文件
+# 解决版本冲突问题 - 使用兼容的版本范围
+
+# 核心MCP框架 - 使用兼容版本
+mcp>=1.11.0,<1.13.0
+fastmcp>=2.11.2
+
+# Office文档处理
+python-docx
+msoffcrypto-tool
+docx2pdf
+python-pptx
+
+# 图像处理
+Pillow>=11.0.0
+fonttools>=4.0.0
+
+# 系统交互
+pywin32>=306
+keyboard>=0.13.5
+pyperclip>=1.9.0
+psutil>=6.0.0
+
+# 网络和API
+httpx>=0.28.1
+requests>=2.32.0
+websocket-client>=1.8.0
+python-socketio>=5.0.0
+uvicorn>=0.32.0
+
+# AI和机器学习
+google-genai
+numpy>=2.0.0
+
+# 开发和测试 - 使用兼容的pydantic版本
+pydantic>=2.8.2,<3.0.0
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0
+pytest-timeout>=2.1.0
+
+# 构建和打包
+pyinstaller==6.11.1
+pefile==2023.2.7
+pywin32-ctypes==0.2.3
+
+# 文档和界面
+gradio
+sphinx-copybutton
+sphinx_rtd_theme
+
+# 其他工具
+python-dotenv
+typing>=3.7.4.3
